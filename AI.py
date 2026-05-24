@@ -27,7 +27,6 @@ from datetime import datetime
 from typing import Any
 
 import google.generativeai as genai
-
 # ──────────────────────────────────────────────────────────────
 # CONFIG GEMINI
 # ──────────────────────────────────────────────────────────────

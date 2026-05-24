@@ -37,11 +37,11 @@ otp_storage = {}
 chat_rooms  = {}
 def get_db_connection():
     return pymysql.connect(
-        host="mysql.railway.internal",
-        port=3306,
-        user="root",
-        password="XLOcDHfIaEUWmWhaVmiXqalCetqrWHhU",
-        database="railway",
+        host=os.getenv("MYSQLHOST", "mysql.railway.internal"),
+        port=int(os.getenv("MYSQLPORT", 3306)),
+        user=os.getenv("MYSQLUSER", "root"),
+        password=os.getenv("MYSQLPASSWORD", "XLOcDHfIaEUWmWhaVmiXqalCetqrWHhU"),
+        database=os.getenv("MYSQLDATABASE", "railway"),
         cursorclass=pymysql.cursors.DictCursor
     )
 

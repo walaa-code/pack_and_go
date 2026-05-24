@@ -18,8 +18,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { API } from "../../constants/api";
 import { useTravelData } from "../../context/TravelContext";
-import { API } from "../../constants/API"; // ✅ Import de l'URL de base
 
 /* ─── Palette ─── */
 const BG = "#060F1E";
