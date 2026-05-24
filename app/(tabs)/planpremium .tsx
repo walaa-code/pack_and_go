@@ -19,11 +19,11 @@ import {
 
 import { useTravelData } from "../../context/TravelContext";
 
+import { API } from "../../constants/api";
 import activitesData from "../../data/activites.json";
 import cafesData from "../../data/cafee.json";
 import hotelsData from "../../data/hotels.json";
 import transportData from "../../data/transport.json";
-import { API } from "../../constants/api";
 import {
   enrichCityDataWithJson,
   getCityTips,
@@ -33,7 +33,6 @@ import {
   type DayPlan as RagDayPlan,
   type RagStep,
 } from "../../service/geminiRagService";
-
 
 // ─── CONFIG ──────────────────────────────────────────────────
 const WEATHER_API_KEY =
@@ -800,9 +799,7 @@ async function fetchGuestEmailsForCode(inviteCode: string): Promise<string[]> {
           if (email && email.includes("@")) emails.push(email);
           else if (item.user_id) {
             try {
-              const userRes = await fetch(
-                `${API}/api/user/${item.user_id}`,
-              );
+              const userRes = await fetch(`${API}/api/user/${item.user_id}`);
               if (userRes.ok) {
                 const user = await userRes.json();
                 if (user.email?.includes("@"))

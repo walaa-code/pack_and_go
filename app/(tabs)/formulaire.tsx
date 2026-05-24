@@ -19,6 +19,7 @@ import {
   View,
 } from "react-native";
 import { useTravelData } from "../../context/TravelContext";
+import { API } from "../../constants/API"; // ✅ Import de l'URL de base
 
 /* ─── Palette ─── */
 const BG = "#060F1E";
@@ -389,15 +390,12 @@ function AppMenuDark({ inviteCode }: { inviteCode: string | null }) {
 export default function FormulaireScreen() {
   const params = useLocalSearchParams<{ userId?: string; ville?: string }>();
 
-  // ✅ FIX CENTRAL : userId depuis params en priorité, sinon depuis TravelContext
   const { travelData, setTravelData } = useTravelData();
   const uid: number | null = (() => {
-    // 1. Params de navigation (venant de promotion.tsx)
     if (params.userId && params.userId.trim() !== "") {
       const n = Number(params.userId);
       if (!isNaN(n) && n > 0) return n;
     }
-    // 2. TravelContext (mis à jour par login.tsx)
     if (travelData?.userId && Number(travelData.userId) > 0) {
       return Number(travelData.userId);
     }
@@ -426,7 +424,6 @@ export default function FormulaireScreen() {
   const slideAnim = useRef(new Animated.Value(30)).current;
 
   useEffect(() => {
-    // ✅ Log de vérification au montage
     console.log(
       "🔍 FormulaireScreen — params.userId:",
       params.userId,
@@ -507,7 +504,6 @@ export default function FormulaireScreen() {
       return;
     }
 
-    // ✅ Bloquer si userId toujours introuvable
     if (!uid) {
       Alert.alert("Session expirée", "Veuillez vous reconnecter.", [
         { text: "Se reconnecter", onPress: () => router.replace("/") },
@@ -519,11 +515,12 @@ export default function FormulaireScreen() {
     setShowFriendsModal(true);
 
     try {
-      const response = await fetch('${API}/api/save_trip', {
+      // ✅ CORRIGÉ : backticks + import API
+      const response = await fetch(`${API}/api/save_trip`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          user_id: uid, // ✅ jamais null ici grâce au guard ci-dessus
+          user_id: uid,
           destination: ville,
           arrival: toLocalDate(dateDebut),
           departure: toLocalDate(dateFin),
@@ -533,7 +530,7 @@ export default function FormulaireScreen() {
       if (res.status === "succes")
         console.log("✅ Voyage enregistré — userId:", uid);
     } catch (error) {
-      console.error(error);
+      console.error("❌ Erreur save_trip:", error);
     }
   };
 
@@ -548,7 +545,7 @@ export default function FormulaireScreen() {
       return;
     }
 
-    // ✅ Code déjà généré → naviguer directement
+    // Code déjà généré → naviguer directement
     if (inviteCode) {
       setShowFriendsModal(false);
       const code = inviteCode;
@@ -570,7 +567,8 @@ export default function FormulaireScreen() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 8000);
 
-      const res = await fetch("${API}/send-invitations", {
+      // ✅ CORRIGÉ : backticks + import API
+      const res = await fetch(`${API}/send-invitations`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
@@ -595,7 +593,7 @@ export default function FormulaireScreen() {
           dateFin,
           emailInvites,
           inviteCode: code,
-          userId: uid, // ✅ on conserve userId dans le contexte
+          userId: uid,
         } as any);
         console.log("✅ inviteCode Flask → contexte :", code, "| userId:", uid);
       } else {
@@ -612,8 +610,11 @@ export default function FormulaireScreen() {
           params: { userId: uid ? String(uid) : undefined },
         });
       }
-    } catch {
-      console.warn("send-invitations timeout — navigation sans code");
+    } catch (error) {
+      console.warn(
+        "⚠️ send-invitations timeout/erreur — navigation sans code",
+        error,
+      );
       setTravelData({
         ville,
         dateDebut,
