@@ -1,0 +1,140 @@
+{
+  "Tunis": [
+    { "Nom": "Café El Ali", "Prix": "3 – 10 TND", "Zone": "Médina" },
+    { "Nom": "Café Panorama", "Prix": "4 – 12 TND", "Zone": "Centre" },
+    {
+      "Nom": "Café Culturel Dar Ben Gacem",
+      "Prix": "4 – 12 TND",
+      "Zone": "Médina"
+    },
+    { "Nom": "Café Journal", "Prix": "5 – 15 TND", "Zone": "Lac 2" },
+    { "Nom": "Café Flo", "Prix": "5 – 15 TND", "Zone": "Centre" }
+  ],
+  "Sousse": [
+    { "Nom": "Rosa Vita", "Prix": "5 – 18 TND", "Zone": "Corniche" },
+    { "Nom": "Parfum d'été", "Prix": "5 – 15 TND", "Zone": "Khezama" },
+    { "Nom": "Gaia", "Prix": "6 – 20 TND", "Zone": "Sahloul" },
+    { "Nom": "Boumiza Square", "Prix": "4 – 15 TND", "Zone": "Boumiza" },
+    { "Nom": "La Vida Luna", "Prix": "5 – 18 TND", "Zone": "Corniche" },
+    { "Nom": "Seed Café", "Prix": "4 – 12 TND", "Zone": "Corniche" },
+    {
+      "Nom": "Stories Café-Resto",
+      "Prix": "3 – 10 TND",
+      "Zone": "Av. 14 Janvier"
+    },
+    { "Nom": "Autour d’un café", "Prix": "3 – 10 TND", "Zone": "Khezama" },
+    {
+      "Nom": "Garanemsa Café",
+      "Prix": "3 – 12 TND",
+      "Zone": "Route touristique"
+    },
+    { "Nom": "Petit Café Maure", "Prix": "3 – 8 TND", "Zone": "Médina" }
+  ],
+  "Monastir": [
+    { "Nom": "Kavos Coffee", "Prix": "4 – 10 TND", "Zone": "Centre" },
+    {
+      "Nom": "Barasti Coffee Shop",
+      "Prix": "4 – 10 TND",
+      "Zone": "La Falaise"
+    },
+    { "Nom": "Latte Studio", "Prix": "4 – 10 TND", "Zone": "Moderne" },
+    { "Nom": "Scondo Coffee", "Prix": "4 – 10 TND", "Zone": "Centre" },
+    { "Nom": "Friends Coffee", "Prix": "3 – 8 TND", "Zone": "Centre" }
+  ],
+  "Sfax": [
+    { "Nom": "Café Diwan", "Prix": "3 – 9 TND", "Zone": "Médina" },
+    { "Nom": "Maison de France", "Prix": "4 – 12 TND", "Zone": "Centre" },
+    { "Nom": "Café Noir", "Prix": "4 – 10 TND", "Zone": "Nasria" },
+    { "Nom": "Le Select", "Prix": "5 – 15 TND", "Zone": "Sfax El Jadida" },
+    { "Nom": "Le lagon", "Prix": "4 – 12 TND", "Zone": "Route de Tunis" }
+  ],
+  "Bizerte": [
+    {
+      "Nom": "Café du Vieux Port",
+      "Prix": "3 – 8 TND",
+      "Zone": "Vieux Port"
+    },
+    { "Nom": "Phénix", "Prix": "4 – 10 TND", "Zone": "Corniche" },
+    { "Nom": "Le Petit Mousse", "Prix": "5 – 15 TND", "Zone": "Corniche" },
+    { "Nom": "Café de la Marine", "Prix": "3 – 9 TND", "Zone": "Port" },
+    { "Nom": "The Bridge", "Prix": "4 – 12 TND", "Zone": "Canal" }
+  ],
+  "Hammamet": [
+    { "Nom": "Sidi Bouhdid Café", "Prix": "3 – 10 TND", "Zone": "Médina" },
+    { "Nom": "Le Barberousse", "Prix": "5 – 15 TND", "Zone": "Marina" },
+    { "Nom": "Café des Nattes", "Prix": "3 – 8 TND", "Zone": "Médina" },
+    { "Nom": "Café La Plage", "Prix": "4 – 12 TND", "Zone": "Plage" },
+    {
+      "Nom": "Calypso Café",
+      "Prix": "5 – 15 TND",
+      "Zone": "Zone touristique"
+    }
+  ],
+  "Mahdia": [
+    {
+      "Nom": "Café El Ghar / Sidi Salem",
+      "Prix": "3 – 9 TND",
+      "Zone": "La Grotte"
+    },
+    { "Nom": "Café Gamra (El Ainba)", "Prix": "3 – 8 TND", "Zone": "Médina" },
+    { "Nom": "Café La Médina", "Prix": "3 – 7 TND", "Zone": "Médina" },
+    { "Nom": "Café Terrasse", "Prix": "3 – 8 TND", "Zone": "Médina" },
+    { "Nom": "Le Quai", "Prix": "4 – 12 TND", "Zone": "Port / Marina" }
+  ],
+  "Djerba": [
+    { "Nom": "Café Ben Yedder", "Prix": "3 – 8 TND", "Zone": "Houmt Souk" },
+    { "Nom": "Moon Café", "Prix": "4 – 12 TND", "Zone": "Zone touristique" },
+    { "Nom": "Café El Fondouk", "Prix": "3 – 8 TND", "Zone": "Centre" },
+    { "Nom": "Sunset Coffee", "Prix": "5 – 15 TND", "Zone": "Plage" },
+    {
+      "Nom": "Djerba Lounge Café",
+      "Prix": "5 – 15 TND",
+      "Zone": "Zone touristique"
+    }
+  ],
+  "Gabès": [
+    { "Nom": "Café El Bahr", "Prix": "3 – 8 TND", "Zone": "Centre" },
+    {
+      "Nom": "Palm Coffee Gabès",
+      "Prix": "4 – 10 TND",
+      "Zone": "Zone touristique"
+    },
+    { "Nom": "Café Jasmin", "Prix": "3 – 8 TND", "Zone": "Centre" },
+    { "Nom": "Le Palais", "Prix": "4 – 12 TND", "Zone": "Corniche" },
+    { "Nom": "Café Oasis Gabès", "Prix": "3 – 9 TND", "Zone": "Centre" }
+  ],
+  "Zarzis": [
+    { "Nom": "Sunset Café", "Prix": "5 – 15 TND", "Zone": "Plage" },
+    { "Nom": "Café Marina Zarzis", "Prix": "4 – 12 TND", "Zone": "Port" },
+    { "Nom": "Café El Medina", "Prix": "3 – 8 TND", "Zone": "Centre" },
+    { "Nom": "Le Phare", "Prix": "4 – 10 TND", "Zone": "Sonia" },
+    { "Nom": "Zarzis Business Café", "Prix": "4 – 12 TND", "Zone": "Centre" }
+  ],
+
+  "Douz / Kébili": [
+    { "Nom": "Café Sahara Douz", "Prix": "3 – 8 TND", "Zone": "Centre" },
+    {
+      "Nom": "Desert Lounge Café",
+      "Prix": "4 – 12 TND",
+      "Zone": "Zone touristique"
+    },
+    { "Nom": "Café Palmier", "Prix": "3 – 7 TND", "Zone": "Centre" },
+    { "Nom": "Café Oasis Kébili", "Prix": "3 – 8 TND", "Zone": "Centre" },
+    {
+      "Nom": "Palm Tree Coffee",
+      "Prix": "4 – 10 TND",
+      "Zone": "Zone touristique"
+    }
+  ],
+  "Tataouine": [
+    { "Nom": "Café Chenini", "Prix": "3 – 8 TND", "Zone": "Village" },
+    {
+      "Nom": "Star Wars Café",
+      "Prix": "4 – 12 TND",
+      "Zone": "Zone touristique"
+    },
+    { "Nom": "Café des Arts", "Prix": "3 – 9 TND", "Zone": "Centre" },
+    { "Nom": "Le Berbère", "Prix": "3 – 8 TND", "Zone": "Médina" },
+    { "Nom": "Ksar Café", "Prix": "4 – 10 TND", "Zone": "Ksour" }
+  ]
+}

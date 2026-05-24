@@ -1,0 +1,257 @@
+{
+  "Ain Draham": {
+    "moyens": ["Taxi", "Louage", "Voiture personnelle"],
+    "aeroport_proche": "Aéroport de Tunis-Carthage (~150 km, 2h15)",
+    "gare_proche": "Gare de Tunis (~150 km)",
+    "conseils": "Routes de montagne sinueuses. Privilégiez un véhicule avec bon moteur. Pas de transport en commun direct depuis Tunis, prendre un louage ou taxi interurbain.",
+    "prix_moyens": {
+      "taxi_centre_ville": "3–6 TND",
+      "louage_Tunis_AinDraham": "12–18 TND/personne",
+      "essence_par_km": "0.3 TND/km"
+    }
+  },
+  "Bizerte": {
+    "moyens": ["Train (SNCFT)", "Louage", "Taxi", "Bus (TRANSTU)"],
+    "aeroport_proche": "Aéroport de Tunis-Carthage (~65 km, 1h)",
+    "gare_proche": "Gare de Bizerte (train direct depuis Tunis)",
+    "conseils": "Train confortable et économique depuis Tunis (départ Gare Nord). Louage depuis le dépôt de Bab Saâdoun. Attention aux embouteillages en été.",
+    "prix_moyens": {
+      "train_Tunis_Bizerte": "4–8 TND",
+      "louage_Tunis_Bizerte": "6–10 TND/personne",
+      "taxi_intra_bizerte": "2–5 TND"
+    }
+  },
+  "Djerba": {
+    "moyens": [
+      "Avion (aéroport Djerba-Zarzis)",
+      "Bac (depuis Jorf)",
+      "Louage",
+      "Taxi",
+      "Vélo",
+      "Voiture"
+    ],
+    "aeroport_proche": "Aéroport international Djerba-Zarzis (DJE)",
+    "gare_proche": "Aucune – liaison par bac ou avion",
+    "conseils": "Bac depuis Jorf toutes les 30 min (15 min de traversée). Louage depuis Tunis jusqu'à Jorf puis bac. Voiture recommandée pour explorer l'île.",
+    "prix_moyens": {
+      "bac_Jorf_Djerba": "1–2 TND/personne + 5–8 TND/voiture",
+      "louage_Tunis_Jorf": "15–25 TND/personne",
+      "taxi_sur_l_ile": "3–10 TND (course courte)"
+    }
+  },
+  "Douz": {
+    "moyens": ["Louage", "Taxi", "Voiture personnelle", "4x4 pour désert"],
+    "aeroport_proche": "Aéroport de Tozeur-Nefta (~110 km, 1h40)",
+    "gare_proche": "Gare de Gabès (~130 km – train)",
+    "conseils": "Louage depuis Gabès ou Tozeur. Pour les excursions dans les dunes, privilégier un 4x4. Pas de transport public intra-désert.",
+    "prix_moyens": {
+      "louage_Gabès_Douz": "7–12 TND",
+      "taxi_porte_du_sahara": "15–30 TND (dépose hôtel)",
+      "4x4_excursion_heure": "60–100 TND/heure"
+    }
+  },
+  "Hammamet": {
+    "moyens": [
+      "Louage",
+      "Taxi",
+      "Bus (TRANSTU)",
+      "Train (ligne Tunis – Nabeul – Hammamet)"
+    ],
+    "aeroport_proche": "Aéroport d'Enfidha-Hammamet (NBE, ~40 km) ou Tunis-Carthage (~65 km)",
+    "gare_proche": "Gare de Hammamet (train direct depuis Tunis)",
+    "conseils": "Train confortable et très utilisé (gare de Hammamet). Louage et bus depuis Tunis. Calèches disponibles en zone touristique (négocier avant).",
+    "prix_moyens": {
+      "train_Tunis_Hammamet": "3–6 TND",
+      "louage_Tunis_Hammamet": "5–8 TND",
+      "calèche_30min": "15–25 TND"
+    }
+  },
+  "Kairouan": {
+    "moyens": ["Louage", "Train", "Taxi", "Bus"],
+    "aeroport_proche": "Aéroport d'Enfidha-Hammamet (~50 km) ou Tunis (~150 km)",
+    "gare_proche": "Gare de Kairouan (ligne depuis Tunis via Sousse)",
+    "conseils": "Train depuis Sousse (environ 1h). Louage très fréquent depuis Sousse, Monastir et Tunis. Pour visiter la médina, se déplacer à pied.",
+    "prix_moyens": {
+      "train_Sousse_Kairouan": "3–5 TND",
+      "louage_Tunis_Kairouan": "8–12 TND",
+      "taxi_centre_ville": "2–4 TND"
+    }
+  },
+  "Kerkennah": {
+    "moyens": ["Bac (depuis Sfax)", "Taxi", "Vélo", "Voiture"],
+    "aeroport_proche": "Aéroport de Sfax–Thyna (~20 km + bac)",
+    "gare_proche": "Gare de Sfax",
+    "conseils": "Bac depuis Sfax (port) – durée 1h15. Peu de transports en commun sur l’île, prévoir véhicule ou vélo. Taxis locaux rares.",
+    "prix_moyens": {
+      "bac_Sfax_Kerkennah": "2–4 TND/personne + 10 TND/voiture",
+      "taxi_Sfax_port": "3–6 TND"
+    }
+  },
+  "Korba": {
+    "moyens": ["Louage", "Taxi", "Bus", "Train (ligne Tunis – Nabeul – Korba)"],
+    "aeroport_proche": "Aéroport de Tunis-Carthage (~80 km)",
+    "gare_proche": "Gare de Korba (train)",
+    "conseils": "Train direct depuis Tunis, louage depuis Nabeul. Petite ville côtière calme, se déplace facilement à pied ou en taxi.",
+    "prix_moyens": {
+      "train_Tunis_Korba": "4–7 TND",
+      "louage_Nabeul_Korba": "2–4 TND",
+      "taxi_intra": "2–3 TND"
+    }
+  },
+  "Korbous": {
+    "moyens": ["Taxi", "Louage", "Voiture personnelle"],
+    "aeroport_proche": "Aéroport de Tunis-Carthage (~50 km)",
+    "gare_proche": "Gare de Tunis",
+    "conseils": "Petite station thermale. Pas de train direct. Louage ou taxi depuis Tunis ou Hammamet. Routes panoramiques mais étroites.",
+    "prix_moyens": {
+      "louage_Tunis_Korbous": "6–10 TND",
+      "taxi_Hammamet_Korbous": "15–25 TND"
+    }
+  },
+  "Kélibia": {
+    "moyens": [
+      "Louage",
+      "Taxi",
+      "Bus",
+      "Train (ligne Tunis – Nabeul – Kélibia)"
+    ],
+    "aeroport_proche": "Aéroport de Tunis-Carthage (~100 km)",
+    "gare_proche": "Gare de Kélibia (train)",
+    "conseils": "Train panoramique en bord de mer. Louage fréquent depuis Nabeul. Très bon marché.",
+    "prix_moyens": {
+      "train_Tunis_Kélibia": "5–8 TND",
+      "louage_Nabeul_Kélibia": "3–5 TND",
+      "taxi_intra": "2–4 TND"
+    }
+  },
+  "Mahdia": {
+    "moyens": ["Train", "Louage", "Taxi", "Bus"],
+    "aeroport_proche": "Aéroport de Monastir Habib Bourguiba (MIR, ~45 km)",
+    "gare_proche": "Gare de Mahdia (train depuis Sousse/Tunis)",
+    "conseils": "Train très pratique depuis Tunis (via Sousse). Louage depuis Sousse ou Monastir. Se déplace bien à pied dans la médina et le front de mer.",
+    "prix_moyens": {
+      "train_Sousse_Mahdia": "3–5 TND",
+      "louage_Tunis_Mahdia": "9–13 TND",
+      "taxi_intra": "2–5 TND"
+    }
+  },
+  "Monastir": {
+    "moyens": ["Train", "Louage", "Taxi", "Bus", "Avion (aéroport Monastir)"],
+    "aeroport_proche": "Aéroport Monastir Habib Bourguiba (MIR)",
+    "gare_proche": "Gare de Monastir",
+    "conseils": "Train très fréquent vers Sousse et Tunis. Louage depuis Tunis pour les trajets directs. Aéroport international bien desservi en été.",
+    "prix_moyens": {
+      "train_Tunis_Monastir": "5–8 TND",
+      "louage_Sousse_Monastir": "2–3 TND",
+      "taxi_centre_ville": "2–4 TND"
+    }
+  },
+  "Nabeul": {
+    "moyens": ["Train (ligne TGM prolongée)", "Louage", "Taxi", "Bus"],
+    "aeroport_proche": "Aéroport de Tunis-Carthage (~65 km)",
+    "gare_proche": "Gare de Nabeul",
+    "conseils": "Train direct depuis Tunis (1h30). Louage très économique depuis Hammamet ou Tunis. Attention aux horaires en soirée.",
+    "prix_moyens": {
+      "train_Tunis_Nabeul": "4–6 TND",
+      "louage_Hammamet_Nabeul": "2–3 TND",
+      "taxi_intra": "2–5 TND"
+    }
+  },
+  "Sfax": {
+    "moyens": [
+      "Train",
+      "Louage",
+      "Taxi",
+      "Bus (TRANSTU Sfax)",
+      "Avion (aéroport Sfax–Thyna)"
+    ],
+    "aeroport_proche": "Aéroport Sfax–Thyna (SFA)",
+    "gare_proche": "Gare de Sfax (train depuis Tunis et sud)",
+    "conseils": "Train direct depuis Tunis (3h). Louage très développé (dépôt El Aïn). Taxis bleus économiques pour centre-ville.",
+    "prix_moyens": {
+      "train_Tunis_Sfax": "10–18 TND (classe 1)",
+      "louage_Tunis_Sfax": "12–18 TND/personne",
+      "taxi_intra_ville": "2–5 TND"
+    }
+  },
+  "Sousse": {
+    "moyens": [
+      "Train (TGM + ligne Tunis – Sousse)",
+      "Louage",
+      "Taxi",
+      "Bus",
+      "Calèches"
+    ],
+    "aeroport_proche": "Aéroport Monastir (MIR, ~15 km) ou Enfidha (NBE)",
+    "gare_proche": "Gare de Sousse",
+    "conseils": "Train direct depuis Tunis toutes les heures. Louage pour les villes voisines. Calèches disponibles port El Kantaoui (négocier). Taxis métreurs.",
+    "prix_moyens": {
+      "train_Tunis_Sousse": "8–12 TND",
+      "louage_Sousse_Hammamet": "4–6 TND",
+      "taxi_centre_port": "3–6 TND",
+      "calèche_1h": "20–35 TND"
+    }
+  },
+  "Tabarka": {
+    "moyens": ["Louage", "Taxi", "Bus", "Avion (aéroport Tabarka–Aïn Draham)"],
+    "aeroport_proche": "Aéroport de Tabarka–Aïn Draham (TBJ)",
+    "gare_proche": "Aucune – gare la plus proche à Tunis (~170 km)",
+    "conseils": "Louage depuis Tunis (départ Bab Saâdoun). Route panoramique mais longue. L’aéroport dessert quelques vols charter en été.",
+    "prix_moyens": {
+      "louage_Tunis_Tabarka": "16–25 TND",
+      "taxi_intra_tabarka": "3–7 TND",
+      "navette_aeroport_centre": "15–20 TND"
+    }
+  },
+  "Tozeur": {
+    "moyens": ["Avion (aéroport Tozeur–Nefta)", "Louage", "Taxi", "4x4"],
+    "aeroport_proche": "Aéroport Tozeur–Nefta (TOE)",
+    "gare_proche": "Gare de Tozeur (train direct depuis Tunis – lent mais panoramique)",
+    "conseils": "Train Tunis–Tozeur (environ 8h, mais magnifique). Louage depuis Gabès ou Kébili. Location 4x4 indispensable pour oasis et désert.",
+    "prix_moyens": {
+      "train_Tunis_Tozeur": "15–25 TND",
+      "louage_Gabès_Tozeur": "15–20 TND",
+      "4x4_excursion_chott": "50–100 TND/demi-journée"
+    }
+  },
+  "Tunis": {
+    "moyens": [
+      "Métro léger (TGM)",
+      "Métro (lignes 1 à 5)",
+      "Bus TRANSTU",
+      "Taxi",
+      "Louage",
+      "Train (SNCFT)"
+    ],
+    "aeroport_proche": "Aéroport Tunis-Carthage (TUN)",
+    "gare_proche": "Gare Tunis (Bab El Khadhra) et Gare Nord (TGM)",
+    "conseils": "Le TGM relie la banlieue nord. Métro léger très utilisé de jour mais éviter tard le soir. Taxis blancs officiels (compteur). Louages pour villes intérieures.",
+    "prix_moyens": {
+      "metro_léger_ticket": "0.5–1 TND",
+      "taxi_aéroport_centre": "10–15 TND",
+      "louage_Tunis_Sousse": "6–10 TND/personne",
+      "train_tgm_carthage": "0.8 TND"
+    }
+  },
+  "Zaghouan": {
+    "moyens": ["Louage", "Taxi", "Bus"],
+    "aeroport_proche": "Aéroport Tunis-Carthage (~60 km)",
+    "gare_proche": "Gare de Tunis puis louage ou taxi",
+    "conseils": "Louage depuis Tunis (dépôt Bab Saâdoun) jusqu’à Zaghouan. Routes de montagne, prévoir véhicule solide. Peu de transports internes.",
+    "prix_moyens": {
+      "louage_Tunis_Zaghouan": "5–8 TND",
+      "taxi_depuis_zaghouan": "3–6 TND pour site temple des Eaux"
+    }
+  },
+  "Zarzis": {
+    "moyens": ["Louage", "Taxi", "Voiture", "Bac (vers Djerba)"],
+    "aeroport_proche": "Aéroport Djerba-Zarzis (DJE, ~10 km)",
+    "gare_proche": "Gare de Gabès (~90 km)",
+    "conseils": "Louage depuis Gabès ou Médenine. Bac pour Djerba via Ajim (plus proche que Jorf). Petite ville balnéaire, taxi économiques.",
+    "prix_moyens": {
+      "louage_Gabès_Zarzis": "6–10 TND",
+      "bac_Zarzis_Ajim_Djerba": "2–3 TND/personne + 5 TND/voiture",
+      "taxi_intra_ville": "2–4 TND"
+    }
+  }
+}

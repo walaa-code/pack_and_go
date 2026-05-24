@@ -1,0 +1,2062 @@
+{
+  "Ain Draham": [
+    {
+      "name": "El Mouradi Hammam Bourguiba",
+      "stars": "4",
+      "description": "Hôtel thermal en montagne."
+    },
+    {
+      "name": "Charme Hôtel La Forêt Ain Drahem",
+      "stars": "3",
+      "description": "Hôtel de charme en pleine nature, ambiance montagne et forêt."
+    },
+    {
+      "name": "El Mouradi Hammam Bourguiba",
+      "stars": "4",
+      "description": "Hôtel thermal en montagne."
+    },
+    {
+      "name": "Charme Hôtel La Forêt",
+      "stars": "3",
+      "description": "Hôtel de charme en pleine nature."
+    }
+  ],
+  "Bizerte": [
+    {
+      "name": "Complexe Touristique Sidi Salem",
+      "stars": "3",
+      "description": "Complexe touristique familial situé face à la mer."
+    },
+    {
+      "name": "Complexe Touristique Sidi Salem",
+      "stars": "3",
+      "description": "Complexe familial face à la mer."
+    }
+  ],
+  "Djerba": [
+    {
+      "name": "Al Jazira Beach & Spa",
+      "stars": "3",
+      "description": "Hôtel balnéaire avec piscine et plage."
+    },
+    {
+      "name": "Djerba Aqua Resort",
+      "stars": "4",
+      "description": "Hôtel familial avec parc aquatique."
+    },
+    {
+      "name": "Hari Club Beach",
+      "stars": "4",
+      "description": "Resort tout compris en bord de mer."
+    },
+    {
+      "name": "El Mouradi Djerba Menzel",
+      "stars": "4",
+      "description": "Resort tout compris en bord de mer."
+    },
+    {
+      "name": "Al Jazira Beach & Spa",
+      "stars": "3",
+      "description": "Hôtel balnéaire avec piscine et plage privée."
+    },
+    {
+      "name": "Caribbean World Djerba",
+      "stars": "4",
+      "description": "Resort tout compris avec animations."
+    },
+    {
+      "name": "Cedriana Djerba",
+      "stars": "3",
+      "description": "Hôtel familial avec piscine."
+    },
+    {
+      "name": "Cesar Thalasso",
+      "stars": "4",
+      "description": "Hôtel avec centre de thalassothérapie, situé en bord de mer, parfait pour détente et bien-être."
+    },
+    {
+      "name": "Club Palm Azur Djerba",
+      "stars": "4",
+      "description": "Resort all inclusive en bord de plage avec piscines et animations."
+    },
+    {
+      "name": "Djerba Aqua Resort",
+      "stars": "4",
+      "description": "Resort familial avec parc aquatique et activités variées."
+    },
+    {
+      "name": "Djerba Inn",
+      "stars": "3",
+      "description": "Hôtel calme à l’architecture traditionnelle."
+    },
+    {
+      "name": "Djerba Resort",
+      "stars": "4",
+      "description": "Resort moderne avec animations et plage privée."
+    },
+    {
+      "name": "El Mouradi Djerba Menzel",
+      "stars": "4",
+      "description": "Grand complexe hôtelier avec plage privée et piscine."
+    },
+    {
+      "name": "Fiesta Beach Djerba",
+      "stars": "4",
+      "description": "Resort animé avec formule tout inclus."
+    },
+    {
+      "name": "Fiesta Beach Djerba",
+      "stars": "4",
+      "description": "Resort all inclusive en bord de mer avec animations et grande piscine."
+    },
+    {
+      "name": "Hari Club Beach",
+      "stars": "4",
+      "description": "Resort all inclusive en bord de mer avec animations."
+    },
+    {
+      "name": "Hasdrubal Prestige Thalassa & Spa",
+      "stars": "5",
+      "description": "Hôtel de luxe avec centre de thalasso haut de gamme."
+    },
+    {
+      "name": "Holiday Beach Djerba",
+      "stars": "4",
+      "description": "Hôtel familial avec accès plage et piscine extérieure."
+    },
+    {
+      "name": "Iberostar Waves Mehari Djerba",
+      "stars": "4",
+      "description": "Hôtel moderne avec piscine et plage privée."
+    },
+    {
+      "name": "Iberostar Selection Eolia Djerba",
+      "stars": "5",
+      "description": "Hôtel premium au design moderne et prestations haut niveau."
+    },
+    {
+      "name": "Joya Paradise",
+      "stars": "4",
+      "description": "Hôtel all inclusive avec piscine et animations."
+    },
+    {
+      "name": "Marine Beach",
+      "stars": "4",
+      "description": "Hôtel balnéaire tout inclus avec animations."
+    },
+    {
+      "name": "Mizwar Djerba",
+      "stars": "3",
+      "description": "Petit hôtel convivial au style traditionnel."
+    },
+    {
+      "name": "Monarque Dar Jerba Narjess",
+      "stars": "4",
+      "description": "Resort familial avec plage privée et activités variées."
+    },
+    {
+      "name": "Radisson Blu Palace Resort & Thalasso",
+      "stars": "5",
+      "description": "Hôtel de luxe avec thalasso et prestations premium."
+    },
+    {
+      "name": "Royal Garden Palace",
+      "stars": "5",
+      "description": "Hôtel luxueux avec jardins et centre thalasso."
+    },
+    {
+      "name": "Royal Karthago Resort & Thalasso",
+      "stars": "4",
+      "description": "Resort all inclusive avec centre de thalasso."
+    },
+    {
+      "name": "Sentido Djerba Beach",
+      "stars": "4",
+      "description": "Resort tout inclus en bord de mer avec animations."
+    },
+    {
+      "name": "Sidi Mansour Djerba",
+      "stars": "3",
+      "description": "Hôtel convivial proche de la plage."
+    },
+    {
+      "name": "Sol Palmeras Beach",
+      "stars": "4",
+      "description": "Resort balnéaire avec animations et formule tout inclus."
+    },
+    {
+      "name": "Telemaque Beach & Spa",
+      "stars": "4",
+      "description": "Hôtel en bord de mer avec spa et piscine."
+    },
+    {
+      "name": "Venice Beach",
+      "stars": "3",
+      "description": "Hôtel balnéaire convivial."
+    },
+    {
+      "name": "Vincci Dar Midoun",
+      "stars": "4",
+      "description": "Resort tout inclus avec animations et plage privée."
+    },
+    {
+      "name": "Vincci Helios Beach",
+      "stars": "4",
+      "description": "Hôtel balnéaire moderne avec grande piscine."
+    },
+    {
+      "name": "Zenon",
+      "stars": "3",
+      "description": "Hôtel simple et économique."
+    },
+    {
+      "name": "Radisson Blu Palace Resort & Thalasso",
+      "stars": "5",
+      "description": "Resort luxe avec thalasso."
+    },
+    {
+      "name": "Iberostar Selection Eolia",
+      "stars": "5",
+      "description": "Hôtel premium moderne."
+    },
+    {
+      "name": "Royal Garden Palace",
+      "stars": "5",
+      "description": "Resort luxe avec jardins et spa."
+    },
+    {
+      "name": "Cesar Thalasso",
+      "stars": "4",
+      "description": "Hôtel avec centre de thalasso."
+    },
+    {
+      "name": "Djerba Aqua Resort",
+      "stars": "4",
+      "description": "Hôtel familial avec aquapark."
+    },
+    {
+      "name": "El Mouradi Djerba Menzel",
+      "stars": "4",
+      "description": "Resort tout compris en bord de mer."
+    },
+    {
+      "name": "Hari Club Beach",
+      "stars": "4",
+      "description": "Resort all inclusive."
+    },
+    {
+      "name": "Holiday Beach",
+      "stars": "4",
+      "description": "Hôtel familial en bord de mer."
+    },
+    {
+      "name": "Monarque Dar Jerba Narjess",
+      "stars": "4",
+      "description": "Resort plage privée."
+    },
+    {
+      "name": "Royal Karthago Resort",
+      "stars": "4",
+      "description": "Hôtel avec centre thalasso."
+    },
+    {
+      "name": "Sentido Djerba Beach",
+      "stars": "4",
+      "description": "Resort en bord de mer."
+    },
+    {
+      "name": "Telemaque Beach & Spa",
+      "stars": "4",
+      "description": "Hôtel plage + spa."
+    },
+    {
+      "name": "Vincci Dar Midoun",
+      "stars": "4",
+      "description": "Resort moderne tout compris."
+    },
+    {
+      "name": "Vincci Helios Beach",
+      "stars": "4",
+      "description": "Hôtel plage avec piscine."
+    },
+    {
+      "name": "Al Jazira Beach & Spa",
+      "stars": "3",
+      "description": "Hôtel balnéaire."
+    },
+    {
+      "name": "Cedriana Djerba",
+      "stars": "3",
+      "description": "Hôtel familial."
+    },
+    {
+      "name": "Djerba Inn",
+      "stars": "3",
+      "description": "Hôtel traditionnel calme."
+    },
+    { "name": "Mizwar", "stars": "3", "description": "Petit hôtel convivial." },
+    {
+      "name": "Sidi Mansour",
+      "stars": "3",
+      "description": "Hôtel proche plage."
+    },
+    {
+      "name": "Venice Beach",
+      "stars": "3",
+      "description": "Hôtel économique."
+    },
+    { "name": "Zenon", "stars": "3", "description": "Hôtel simple." }
+  ],
+  "Douz": [
+    {
+      "name": "Golden Yasmin Sun Palm Douz",
+      "stars": "4",
+      "description": "Hôtel au style désertique idéal pour excursions sahariennes."
+    },
+    {
+      "name": "Sahara Douz",
+      "stars": "4",
+      "description": "Hôtel saharien idéal pour excursions désert et balades en 4x4."
+    },
+    {
+      "name": "The Residence Douz",
+      "stars": "4",
+      "description": "Hôtel de charme au style saharien élégant."
+    },
+    {
+      "name": "Sahara Douz",
+      "stars": "4",
+      "description": "Hôtel saharien idéal pour excursions désert."
+    },
+    {
+      "name": "The Residence Douz",
+      "stars": "4",
+      "description": "Hôtel de charme au style saharien élégant."
+    },
+    {
+      "name": "Golden Yasmin Sun Palm Douz",
+      "stars": "4",
+      "description": "Hôtel désertique avec piscine."
+    }
+  ],
+  "Hammamet": [
+    {
+      "name": "The Mirage Resort & Spa",
+      "stars": "4",
+      "description": "Complexe touristique avec spa et accès direct plage."
+    },
+    {
+      "name": "Omar Khayam",
+      "stars": "3",
+      "description": "Hôtel club familial avec piscine et plage privée."
+    },
+    {
+      "name": "Nesrine",
+      "stars": "4",
+      "description": "Hôtel tout compris proche de la plage."
+    },
+    {
+      "name": "Tunisia Lodge",
+      "stars": "4",
+      "description": "Hôtel style arabo-andalou proche plage."
+    },
+    {
+      "name": "Medina Belisaire Thalasso",
+      "stars": "4",
+      "description": "Hôtel avec centre thalasso et piscine."
+    },
+    {
+      "name": "Dar Khayam",
+      "stars": "3",
+      "description": "Hôtel familial en bord de mer."
+    },
+    {
+      "name": "Lella Baya & Thalasso",
+      "stars": "4",
+      "description": "Hôtel au style oriental avec centre thalasso."
+    },
+    {
+      "name": "The Russelior Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel luxe avec spa haut standing."
+    },
+    {
+      "name": "Houda Yasmine Marina & Spa",
+      "stars": "4",
+      "description": "Hôtel proche marina Yasmine avec spa."
+    },
+    {
+      "name": "Flora Park by Turismark",
+      "stars": "4",
+      "description": "Hôtel calme réservé adultes."
+    },
+    {
+      "name": "Alhambra Thalasso",
+      "stars": "4",
+      "description": "Hôtel élégant avec centre thalasso."
+    },
+    {
+      "name": "El Mouradi Hammamet",
+      "stars": "5",
+      "description": "Grand resort avec plage privée et piscine."
+    },
+    {
+      "name": "Houda Yasmine Marina & Spa",
+      "stars": "4",
+      "description": "Hôtel proche marina avec spa."
+    },
+    {
+      "name": "Laico Hammamet",
+      "stars": "4",
+      "description": "Hôtel moderne en zone touristique."
+    },
+    {
+      "name": "Monarque Dar Zahra",
+      "stars": "3",
+      "description": "Hôtel club familial."
+    },
+    {
+      "name": "Aziza Thalasso Golf",
+      "stars": "4",
+      "description": "Hôtel réservé adultes avec thalasso."
+    },
+    {
+      "name": "Bel Azur Thalasso & Bungalows",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec centre thalasso."
+    },
+    {
+      "name": "Dar Khayam",
+      "stars": "3",
+      "description": "Hôtel familial en bord de mer avec activités sportives."
+    },
+    {
+      "name": "Delfino Beach Resort & Spa",
+      "stars": "4",
+      "description": "Resort balnéaire avec spa et plage privée."
+    },
+    {
+      "name": "Donia Hôtel",
+      "stars": "3",
+      "description": "Hôtel économique proche plage et centre-ville."
+    },
+    {
+      "name": "Eden Yasmine Hotel & Spa",
+      "stars": "4",
+      "description": "Hôtel situé à Yasmine Hammamet avec spa et piscine."
+    },
+    {
+      "name": "Emira Hammamet",
+      "stars": "3",
+      "description": "Hôtel familial à proximité de la plage."
+    },
+    {
+      "name": "Excel Hammamet",
+      "stars": "3",
+      "description": "Hôtel convivial situé en zone touristique."
+    },
+    {
+      "name": "Flora Park by Turismark",
+      "stars": "4",
+      "description": "Boutique hôtel moderne situé à Yasmine Hammamet, ambiance calme et élégante."
+    },
+    {
+      "name": "Hammamet Garden Resort & Spa",
+      "stars": "4",
+      "description": "Resort familial avec piscine, spa et accès plage."
+    },
+    {
+      "name": "Hammamet Serail",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec centre de thalassothérapie."
+    },
+    {
+      "name": "Hasdrubal Thalassa Hammamet",
+      "stars": "5",
+      "description": "Hôtel luxueux spécialisé en thalassothérapie."
+    },
+    {
+      "name": "Iberostar Selection Mirage",
+      "stars": "5",
+      "description": "Resort 5★ avec plage privée et grande piscine."
+    },
+    {
+      "name": "Iberostar Waves Averroes",
+      "stars": "4",
+      "description": "Hôtel moderne face à la mer avec spa."
+    },
+    {
+      "name": "La Playa Hotel Club",
+      "stars": "3",
+      "description": "Hôtel convivial situé en zone touristique."
+    },
+    {
+      "name": "L'ATRIUM",
+      "stars": "4",
+      "description": "Hôtel confortable au cœur de Yasmine Hammamet."
+    },
+    {
+      "name": "Le Royal Hammamet",
+      "stars": "5",
+      "description": "Resort de luxe avec thalasso et plage privée."
+    },
+    {
+      "name": "Lella Baya & Thalasso",
+      "stars": "4",
+      "description": "Hôtel au style oriental avec centre de thalassothérapie."
+    },
+    {
+      "name": "Medina Belisaire Thalasso",
+      "stars": "4",
+      "description": "Hôtel de charme avec centre de thalassothérapie."
+    },
+    {
+      "name": "Mehari Hammamet",
+      "stars": "5",
+      "description": "Resort 5★ avec golf et plage privée."
+    },
+    {
+      "name": "Nahrawess Resort & Thalasso",
+      "stars": "4",
+      "description": "Hôtel réputé pour son centre de thalassothérapie."
+    },
+    {
+      "name": "Nesrine",
+      "stars": "4",
+      "description": "Hôtel convivial proche plage et zone touristique."
+    },
+    {
+      "name": "Paradis Palace",
+      "stars": "4",
+      "description": "Resort balnéaire avec jardin et plage privée."
+    },
+    {
+      "name": "Radisson Blu Resort & Thalasso",
+      "stars": "5",
+      "description": "Resort 5★ élégant avec plage privée et spa."
+    },
+    {
+      "name": "Residence Hammamet",
+      "stars": "3",
+      "description": "Résidence hôtelière proche plage et centre-ville."
+    },
+    {
+      "name": "Residence Romane",
+      "stars": "3",
+      "description": "Hôtel convivial à proximité de la mer."
+    },
+    {
+      "name": "Royal Azur",
+      "stars": "5",
+      "description": "Resort 5★ élégant avec plage privée."
+    },
+    {
+      "name": "Royal Tulip Taj Sultan Hammamet",
+      "stars": "5",
+      "description": "Hôtel haut de gamme avec spa et plage privée."
+    },
+    {
+      "name": "Sentido Phenicia",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec plage privée et centre de bien-être."
+    },
+    {
+      "name": "Sol Azur Beach & Congress",
+      "stars": "4",
+      "description": "Hôtel adapté aux congrès avec plage privée."
+    },
+    {
+      "name": "Steigenberger Marhaba Thalasso",
+      "stars": "5",
+      "description": "Hôtel 5★ réputé pour son centre de thalassothérapie."
+    },
+    {
+      "name": "The Russelior Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel 5★ luxueux avec spa et centre de bien-être."
+    },
+    {
+      "name": "TUI BLUE Oceana Suites",
+      "stars": "5",
+      "description": "Hôtel réservé aux adultes, cadre chic et plage privée."
+    },
+    {
+      "name": "Tunisia Lodge",
+      "stars": "4",
+      "description": "Hôtel familial proche de la plage."
+    },
+    {
+      "name": "Vincci Marillia",
+      "stars": "4",
+      "description": "Hôtel face à la mer avec spa et animations."
+    },
+    {
+      "name": "Vincci Nozha Beach",
+      "stars": "4",
+      "description": "Resort familial avec accès direct plage."
+    },
+    {
+      "name": "Vincci Saphir Palace & Spa",
+      "stars": "5",
+      "description": "Hôtel 5★ élégant avec centre de thalasso."
+    },
+    {
+      "name": "Yadis Hammamet",
+      "stars": "4",
+      "description": "Hôtel moderne proche de la zone touristique."
+    },
+    {
+      "name": "Zodiac",
+      "stars": "4",
+      "description": "Hôtel convivial situé à Yasmine Hammamet."
+    },
+    {
+      "name": "Iberostar Selection Mirage",
+      "stars": "5",
+      "description": "Resort luxe plage privée."
+    },
+    {
+      "name": "Le Royal Hammamet",
+      "stars": "5",
+      "description": "Hôtel luxe avec thalasso."
+    },
+    {
+      "name": "Radisson Blu Resort & Thalasso",
+      "stars": "5",
+      "description": "Resort 5★ élégant."
+    },
+    {
+      "name": "Steigenberger Marhaba Thalasso",
+      "stars": "5",
+      "description": "Hôtel 5★ thalasso réputée."
+    },
+    {
+      "name": "The Russelior Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel luxe spa premium."
+    },
+    {
+      "name": "TUI Blue Oceana Suites",
+      "stars": "5",
+      "description": "Hôtel adultes only."
+    },
+    {
+      "name": "Vincci Saphir Palace",
+      "stars": "5",
+      "description": "Hôtel 5★ avec spa."
+    },
+    {
+      "name": "El Mouradi Hammamet",
+      "stars": "5",
+      "description": "Grand resort plage privée."
+    },
+    {
+      "name": "Medina Solaria & Thalasso",
+      "stars": "5",
+      "description": "Resort luxe Yasmine."
+    },
+    {
+      "name": "Alhambra Thalasso",
+      "stars": "4",
+      "description": "Hôtel élégant thalasso."
+    },
+    {
+      "name": "Aziza Thalasso Golf",
+      "stars": "4",
+      "description": "Hôtel adultes only."
+    },
+    {
+      "name": "Bel Azur Thalasso",
+      "stars": "4",
+      "description": "Hôtel plage + spa."
+    },
+    {
+      "name": "Delfino Beach Resort",
+      "stars": "4",
+      "description": "Resort balnéaire."
+    },
+    {
+      "name": "Eden Yasmine",
+      "stars": "4",
+      "description": "Hôtel Yasmine Hammamet."
+    },
+    {
+      "name": "Hammamet Garden Resort",
+      "stars": "4",
+      "description": "Resort familial."
+    },
+    {
+      "name": "Hammamet Serail",
+      "stars": "4",
+      "description": "Hôtel avec thalasso."
+    },
+    {
+      "name": "Lella Baya & Thalasso",
+      "stars": "4",
+      "description": "Hôtel oriental."
+    },
+    {
+      "name": "Nahrawess Resort",
+      "stars": "4",
+      "description": "Hôtel thalasso."
+    },
+    {
+      "name": "Paradis Palace",
+      "stars": "4",
+      "description": "Resort plage privée."
+    },
+    {
+      "name": "Sentido Phenicia",
+      "stars": "4",
+      "description": "Hôtel balnéaire."
+    },
+    {
+      "name": "Sol Azur Beach",
+      "stars": "4",
+      "description": "Hôtel congrès + plage."
+    },
+    {
+      "name": "Tunisia Lodge",
+      "stars": "4",
+      "description": "Hôtel style arabo-andalou."
+    },
+    {
+      "name": "Vincci Marillia",
+      "stars": "4",
+      "description": "Hôtel face mer."
+    },
+    {
+      "name": "Vincci Nozha Beach",
+      "stars": "4",
+      "description": "Resort familial."
+    },
+    {
+      "name": "Yadis Hammamet",
+      "stars": "4",
+      "description": "Hôtel zone touristique."
+    },
+    { "name": "Dar Khayam", "stars": "3", "description": "Hôtel familial." },
+    { "name": "Emira", "stars": "3", "description": "Hôtel économique." },
+    {
+      "name": "Excel Hammamet",
+      "stars": "3",
+      "description": "Hôtel convivial."
+    },
+    {
+      "name": "La Playa Hotel Club",
+      "stars": "3",
+      "description": "Hôtel club."
+    },
+    {
+      "name": "Omar Khayam",
+      "stars": "3",
+      "description": "Hôtel club familial."
+    },
+    {
+      "name": "Residence Hammamet",
+      "stars": "3",
+      "description": "Résidence proche plage."
+    },
+    {
+      "name": "Residence Romane",
+      "stars": "3",
+      "description": "Hôtel simple."
+    },
+    {
+      "name": "Zodiac",
+      "stars": "4",
+      "description": "Hôtel Yasmine Hammamet."
+    },
+    {
+      "name": "Diar Lemdina Hammamet",
+      "stars": "4",
+      "description": "Hôtel au style médina proche Carthage Land."
+    },
+    {
+      "name": "El Mouradi El Menzah",
+      "stars": "4",
+      "description": "Hôtel familial proche marina."
+    },
+    {
+      "name": "Medina Solaria & Thalasso",
+      "stars": "5",
+      "description": "Resort luxe avec thalasso."
+    },
+    {
+      "name": "Alhambra Thalasso",
+      "stars": "4",
+      "description": "Hôtel élégant avec centre de thalassothérapie."
+    }
+  ],
+  "Kairouan": [
+    {
+      "name": "Continental Kairouan",
+      "stars": "3",
+      "description": "Hôtel proche des sites historiques de Kairouan, adapté aux groupes et circuits."
+    },
+    {
+      "name": "Continental Kairouan",
+      "stars": "3",
+      "description": "Hôtel proche sites historiques."
+    }
+  ],
+  "Kerkennah": [
+    {
+      "name": "Cercina Hotel",
+      "stars": "3",
+      "description": "Hôtel calme en bord de mer."
+    }
+  ],
+  "Korba": [
+    {
+      "name": "Africa Jade Thalasso",
+      "stars": "4",
+      "description": "Hôtel en bord de mer avec centre de thalassothérapie."
+    },
+    {
+      "name": "Africa Jade Thalasso",
+      "stars": "4",
+      "description": "Hôtel plage avec centre thalasso."
+    }
+  ],
+  "Korbous": [
+    {
+      "name": "Le Grand Hotel des Thermes",
+      "stars": "4",
+      "description": "Hôtel thermal réputé pour ses cures et soins."
+    },
+    {
+      "name": "Royal Tulip Korbous Bay Thalasso & Springs",
+      "stars": "5",
+      "description": "Hôtel thermal de luxe avec vue panoramique sur la mer."
+    },
+    {
+      "name": "Royal Tulip Korbous",
+      "stars": "5",
+      "description": "Hôtel thermal luxe vue mer."
+    },
+    {
+      "name": "Le Grand Hôtel des Thermes",
+      "stars": "4",
+      "description": "Hôtel thermal réputé."
+    }
+  ],
+  "Kelibia": [
+    {
+      "name": "Kelibia Beach",
+      "stars": "4",
+      "description": "Resort en bord de mer avec vue panoramique."
+    },
+    {
+      "name": "Kelibia Beach",
+      "stars": "4",
+      "description": "Resort vue panoramique mer."
+    }
+  ],
+  "Mahdia": [
+    {
+      "name": "Dakynus",
+      "stars": "3",
+      "description": "Petit hôtel proche mer, ambiance calme."
+    },
+    {
+      "name": "El Mouradi Mahdia",
+      "stars": "5",
+      "description": "Resort 5★ avec plage privée et thalasso."
+    },
+    {
+      "name": "Thapsus Beach Resort",
+      "stars": "4",
+      "description": "Resort tout compris en bord de mer."
+    },
+    {
+      "name": "Dakynus",
+      "stars": "3",
+      "description": "Petit hôtel convivial situé près de la plage."
+    },
+    {
+      "name": "El Borj",
+      "stars": "3",
+      "description": "Hôtel en bord de mer avec ambiance familiale."
+    },
+    {
+      "name": "El Mehdi Beach Resort",
+      "stars": "4",
+      "description": "Resort tout inclus avec aquapark et plage privée."
+    },
+    {
+      "name": "El Mouradi Cap Mahdia",
+      "stars": "3",
+      "description": "Hôtel balnéaire avec accès direct à la plage."
+    },
+    {
+      "name": "El Mouradi Mahdia",
+      "stars": "5",
+      "description": "Hôtel 5 étoiles avec thalasso et vue mer."
+    },
+    {
+      "name": "Iberostar Royal El Mansour",
+      "stars": "4",
+      "description": "Resort all inclusive en bord de mer avec spa."
+    },
+    {
+      "name": "Mahdia Beach & Aqua Park",
+      "stars": "4",
+      "description": "Hôtel all inclusive avec parc aquatique."
+    },
+    {
+      "name": "Mahdia Palace Thalasso",
+      "stars": "5",
+      "description": "Hôtel luxueux avec centre de thalassothérapie réputé."
+    },
+    {
+      "name": "Nour Palace Resort & Thalasso",
+      "stars": "5",
+      "description": "Grand resort de luxe avec plage privée et thalasso."
+    },
+    {
+      "name": "Tanfous (Ex Hawai Beach Club)",
+      "stars": "3",
+      "description": "Hôtel balnéaire familial."
+    },
+    {
+      "name": "Thapsus Beach Resort",
+      "stars": "4",
+      "description": "Resort all inclusive avec plage privée."
+    },
+    {
+      "name": "El Mouradi Mahdia",
+      "stars": "5",
+      "description": "Resort 5★ plage + thalasso."
+    },
+    {
+      "name": "Mahdia Palace Thalasso",
+      "stars": "5",
+      "description": "Hôtel luxe thalasso."
+    },
+    {
+      "name": "Nour Palace",
+      "stars": "5",
+      "description": "Grand resort luxe."
+    },
+    {
+      "name": "El Mehdi Beach Resort",
+      "stars": "4",
+      "description": "Resort tout compris."
+    },
+    {
+      "name": "Thapsus Beach Resort",
+      "stars": "4",
+      "description": "Hôtel plage privée."
+    },
+    {
+      "name": "Mahdia Beach & Aqua Park",
+      "stars": "4",
+      "description": "Hôtel avec aquapark."
+    },
+    { "name": "Dakynus", "stars": "3", "description": "Petit hôtel calme." },
+    { "name": "El Borj", "stars": "3", "description": "Hôtel familial." },
+    { "name": "Tanfous", "stars": "3", "description": "Hôtel balnéaire." }
+  ],
+  "Monastir": [
+    {
+      "name": "Helya Beach & Spa",
+      "stars": "4",
+      "description": "Hôtel en bord de mer avec spa, piscine et formule tout compris."
+    },
+    {
+      "name": "Blumar Resort & SPA",
+      "stars": "4",
+      "description": "Resort moderne face à la mer avec centre bien-être."
+    },
+    {
+      "name": "Houda Golf Beach & Aquapark",
+      "stars": "3",
+      "description": "Hôtel familial avec parc aquatique et accès plage."
+    },
+    {
+      "name": "Skanes Sérail",
+      "stars": "4",
+      "description": "Resort en bord de mer avec animation et piscine."
+    },
+    {
+      "name": "Vincci Rosa Beach",
+      "stars": "4",
+      "description": "Hôtel moderne avec piscine et accès plage."
+    },
+    {
+      "name": "El Mouradi Skanes",
+      "stars": "4",
+      "description": "Hôtel balnéaire tout compris."
+    },
+    {
+      "name": "Helya Beach",
+      "stars": "4",
+      "description": "Hôtel en bord de mer avec animation."
+    },
+    {
+      "name": "Amir Palace",
+      "stars": "4",
+      "description": "Resort en bord de mer avec piscine et spa."
+    },
+    {
+      "name": "Blumar Resort & SPA",
+      "stars": "4",
+      "description": "Resort moderne face à la mer avec spa."
+    },
+    {
+      "name": "Delphin Habib Monastir",
+      "stars": "4",
+      "description": "Hôtel en centre-ville avec accès direct plage."
+    },
+    {
+      "name": "El Mouradi Skanes",
+      "stars": "4",
+      "description": "Resort all inclusive en bord de mer."
+    },
+    {
+      "name": "Hilton Skanes Monastir Beach Resort",
+      "stars": "5",
+      "description": "Resort moderne en bord de mer avec prestations internationales."
+    },
+    {
+      "name": "Hotel Royal Rihana",
+      "stars": "4",
+      "description": "Resort tout inclus avec activités familiales."
+    },
+    {
+      "name": "Houda Golf Beach & Aquapark",
+      "stars": "3",
+      "description": "Hôtel familial avec parc aquatique."
+    },
+    {
+      "name": "Iberostar Kuriat Palace",
+      "stars": "5",
+      "description": "Resort de luxe en bord de plage avec piscines."
+    },
+    {
+      "name": "Liberty Resort",
+      "stars": "4",
+      "description": "Resort familial avec animations et plage privée."
+    },
+    {
+      "name": "Marina Cap Monastir",
+      "stars": "3",
+      "description": "Résidence hôtelière face à la marina."
+    },
+    {
+      "name": "Rosa Beach (ex Vincci)",
+      "stars": "4",
+      "description": "Hôtel balnéaire rénové avec formule tout inclus."
+    },
+    {
+      "name": "Sahara Beach Aqua Park",
+      "stars": "3",
+      "description": "Hôtel familial avec parc aquatique et accès direct plage."
+    },
+    {
+      "name": "Skanes Seraill",
+      "stars": "4",
+      "description": "Resort all inclusive avec piscine et accès plage."
+    },
+    {
+      "name": "Hilton Skanes",
+      "stars": "5",
+      "description": "Resort luxe bord mer."
+    },
+    {
+      "name": "Iberostar Kuriat Palace",
+      "stars": "5",
+      "description": "Resort plage 5★."
+    },
+    {
+      "name": "Amir Palace",
+      "stars": "4",
+      "description": "Resort plage + spa."
+    },
+    {
+      "name": "Delphin Habib",
+      "stars": "4",
+      "description": "Hôtel centre-ville plage."
+    },
+    {
+      "name": "El Mouradi Skanes",
+      "stars": "4",
+      "description": "Resort tout compris."
+    },
+    { "name": "Helya Beach", "stars": "4", "description": "Hôtel bord mer." },
+    {
+      "name": "Hotel Royal Rihana",
+      "stars": "4",
+      "description": "Resort familial."
+    },
+    {
+      "name": "Liberty Resort",
+      "stars": "4",
+      "description": "Hôtel animations."
+    },
+    { "name": "Rosa Beach", "stars": "4", "description": "Hôtel rénové." },
+    { "name": "Skanes Seraill", "stars": "4", "description": "Resort plage." },
+    {
+      "name": "Sahara Beach",
+      "stars": "3",
+      "description": "Hôtel avec aquapark."
+    },
+    {
+      "name": "Houda Golf Beach",
+      "stars": "3",
+      "description": "Hôtel familial."
+    },
+    {
+      "name": "Marina Cap Monastir",
+      "stars": "3",
+      "description": "Résidence marina."
+    }
+  ],
+  "Nabeul": [
+    {
+      "name": "Byzance Nabeul",
+      "stars": "3",
+      "description": "Hôtel balnéaire économique."
+    },
+    {
+      "name": "Khayam Garden Beach & Spa",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec spa et plage privée."
+    },
+    {
+      "name": "Omar Khayam",
+      "stars": "3",
+      "description": "Hôtel familial en bord de mer."
+    },
+    {
+      "name": "Khayam Garden Beach & Spa",
+      "stars": "4",
+      "description": "Hôtel plage + spa."
+    },
+    {
+      "name": "Byzance Nabeul",
+      "stars": "3",
+      "description": "Hôtel économique."
+    }
+  ],
+  "Sfax": [
+    {
+      "name": "Occidental Sfax Centre",
+      "stars": "4",
+      "description": "Hôtel business au centre de Sfax."
+    },
+    {
+      "name": "Borj Dhiafa",
+      "stars": "4",
+      "description": "Hôtel chic et calme en zone résidentielle."
+    },
+    {
+      "name": "Business Hotel Sfax",
+      "stars": "4",
+      "description": "Hôtel moderne adapté aux voyages d’affaires."
+    },
+    {
+      "name": "Cercina Hotel",
+      "stars": "3",
+      "description": "Hôtel simple et confortable proche du centre-ville de Sfax, idéal pour séjours professionnels."
+    },
+    {
+      "name": "Dar El Hana Sfax",
+      "stars": "3",
+      "description": "Hôtel urbain confortable pour séjours d’affaires."
+    },
+    {
+      "name": "El Layeli Hotel",
+      "stars": "3",
+      "description": "Hôtel simple et fonctionnel pour courts séjours."
+    },
+    {
+      "name": "Ibis Sfax",
+      "stars": "3",
+      "description": "Hôtel moderne et fonctionnel, idéal pour séjours professionnels."
+    },
+    {
+      "name": "Les Oliviers Palace",
+      "stars": "5",
+      "description": "Hôtel 5★ élégant au centre-ville, idéal affaires et événements."
+    },
+    {
+      "name": "Occidental Sfax Centre",
+      "stars": "4",
+      "description": "Hôtel urbain confortable au centre-ville."
+    },
+    {
+      "name": "Somvik Grand Hôtel",
+      "stars": "3",
+      "description": "Hôtel urbain confortable pour séjours courts."
+    },
+    {
+      "name": "Les Oliviers Palace",
+      "stars": "5",
+      "description": "Hôtel 5★ centre-ville."
+    },
+    {
+      "name": "Borj Dhiafa",
+      "stars": "4",
+      "description": "Hôtel chic résidentiel."
+    },
+    {
+      "name": "Business Hotel Sfax",
+      "stars": "4",
+      "description": "Hôtel affaires."
+    },
+    {
+      "name": "Occidental Sfax Centre",
+      "stars": "4",
+      "description": "Hôtel centre-ville."
+    },
+    { "name": "Ibis Sfax", "stars": "3", "description": "Hôtel moderne." },
+    { "name": "Dar El Hana", "stars": "3", "description": "Hôtel urbain." },
+    { "name": "El Layeli", "stars": "3", "description": "Hôtel simple." },
+    {
+      "name": "Somvik Grand Hôtel",
+      "stars": "3",
+      "description": "Hôtel court séjour."
+    }
+  ],
+  "Sousse": [
+    {
+      "name": "Cosmos Tergui Sousse",
+      "stars": "3",
+      "description": "Hôtel économique proche de la mer."
+    },
+    {
+      "name": "Marhaba Royal Salem",
+      "stars": "4",
+      "description": "Resort en bord de mer avec grand jardin et spa."
+    },
+    {
+      "name": "Marhaba Salem",
+      "stars": "3",
+      "description": "Hôtel club familial avec animations."
+    },
+    {
+      "name": "Jaz Tour Khalef",
+      "stars": "5",
+      "description": "Grand resort avec plage privée et spa."
+    },
+    {
+      "name": "Sousse Palace Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel luxe en centre-ville face à la mer."
+    },
+    {
+      "name": "Riadh Palms",
+      "stars": "4",
+      "description": "Hôtel face à la plage, centre-ville Sousse."
+    },
+    {
+      "name": "Royal Jinene",
+      "stars": "3",
+      "description": "Hôtel familial économique."
+    },
+    {
+      "name": "Orient Palace",
+      "stars": "4",
+      "description": "Resort balnéaire avec piscine et plage."
+    },
+    {
+      "name": "Marhaba Club",
+      "stars": "3",
+      "description": "Hôtel club avec animations."
+    },
+    {
+      "name": "El Ksar Resort & Thalasso",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec centre thalasso."
+    },
+    {
+      "name": "Marhaba Club Sousse",
+      "stars": "3",
+      "description": "Hôtel club tout compris."
+    },
+    {
+      "name": "Alrawabi",
+      "stars": "3",
+      "description": "Hôtel économique proche plage."
+    },
+    {
+      "name": "Hotel Jinene",
+      "stars": "3",
+      "description": "Hôtel proche plage avec ambiance simple et conviviale."
+    },
+    {
+      "name": "Jaz Tour Khalef",
+      "stars": "4",
+      "description": "Resort balnéaire avec plage privée et centre de bien-être."
+    },
+    {
+      "name": "Marhaba Beach",
+      "stars": "4",
+      "description": "Resort balnéaire avec grande piscine et accès plage."
+    },
+    {
+      "name": "Marhaba Royal Salem",
+      "stars": "4",
+      "description": "Hôtel familial avec accès direct plage."
+    },
+    {
+      "name": "Marhaba Salem",
+      "stars": "4",
+      "description": "Resort convivial avec animations et piscine."
+    },
+    {
+      "name": "Movenpick Resort & Marine Spa",
+      "stars": "5",
+      "description": "Resort de luxe en bord de mer avec spa haut de gamme."
+    },
+    {
+      "name": "Occidental Sousse Marhaba",
+      "stars": "4",
+      "description": "Resort balnéaire rénové avec plage privée."
+    },
+    {
+      "name": "Orient Palace Sousse",
+      "stars": "4",
+      "description": "Hôtel face à la mer avec piscine et centre bien-être."
+    },
+    {
+      "name": "Riadh Palms",
+      "stars": "4",
+      "description": "Grand hôtel face à la mer avec animations et piscine."
+    },
+    {
+      "name": "Royal Jinene",
+      "stars": "4",
+      "description": "Hôtel balnéaire convivial avec piscine extérieure."
+    },
+    {
+      "name": "Sousse Palace Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel 5★ situé au centre-ville avec vue mer et spa."
+    },
+    {
+      "name": "Sousse Pearl Marriott Resort & Spa",
+      "stars": "5",
+      "description": "Resort de luxe en bord de mer avec services premium."
+    },
+    {
+      "name": "Soviva Resort",
+      "stars": "3",
+      "description": "Hôtel économique avec piscine et animations."
+    },
+    {
+      "name": "Sousse Pearl Marriott",
+      "stars": "5",
+      "description": "Resort luxe bord mer."
+    },
+    {
+      "name": "Sousse Palace",
+      "stars": "5",
+      "description": "Hôtel 5★ centre-ville."
+    },
+    {
+      "name": "Jaz Tour Khalef",
+      "stars": "5",
+      "description": "Resort plage + spa."
+    },
+    {
+      "name": "Movenpick Resort",
+      "stars": "5",
+      "description": "Hôtel luxe bord mer."
+    },
+    {
+      "name": "Marhaba Royal Salem",
+      "stars": "4",
+      "description": "Resort plage."
+    },
+    { "name": "Marhaba Beach", "stars": "4", "description": "Hôtel bord mer." },
+    {
+      "name": "Orient Palace",
+      "stars": "4",
+      "description": "Hôtel balnéaire."
+    },
+    {
+      "name": "Occidental Sousse Marhaba",
+      "stars": "4",
+      "description": "Resort rénové."
+    },
+    {
+      "name": "Riadh Palms",
+      "stars": "4",
+      "description": "Hôtel centre-ville plage."
+    },
+    { "name": "Royal Jinene", "stars": "4", "description": "Hôtel familial." },
+    { "name": "Marhaba Salem", "stars": "3", "description": "Hôtel club." },
+    {
+      "name": "Marhaba Club",
+      "stars": "3",
+      "description": "Hôtel animations."
+    },
+    {
+      "name": "Soviva Resort",
+      "stars": "3",
+      "description": "Hôtel économique."
+    },
+    { "name": "Hotel Jinene", "stars": "3", "description": "Hôtel simple." },
+    { "name": "Alrawabi", "stars": "3", "description": "Hôtel économique." },
+    {
+      "name": "Cosmos Tergui",
+      "stars": "3",
+      "description": "Hôtel proche mer."
+    },
+    {
+      "name": "El Mouradi Palace",
+      "stars": "5",
+      "description": "Grand resort luxe avec thalasso et plage privée."
+    },
+    {
+      "name": "Houria Palace",
+      "stars": "4",
+      "description": "Hôtel club avec piscine et proximité marina."
+    },
+    {
+      "name": "El Mouradi Club Selima",
+      "stars": "3",
+      "description": "Hôtel club avec bungalows."
+    },
+    {
+      "name": "El Mouradi Club Selima",
+      "stars": "3",
+      "description": "Hôtel club avec bungalows."
+    },
+    {
+      "name": "El Mouradi Palm Marina",
+      "stars": "5",
+      "description": "Resort luxe avec spa et plage privée."
+    },
+    {
+      "name": "El Mouradi Club Kantaoui",
+      "stars": "4",
+      "description": "Resort animé proche du port de plaisance."
+    },
+    {
+      "name": "El Mouradi Palace",
+      "stars": "5",
+      "description": "Hôtel luxueux avec centre de congrès et spa."
+    },
+    {
+      "name": "El Mouradi Port El Kantaoui",
+      "stars": "4",
+      "description": "Hôtel confortable proche du port et des loisirs."
+    },
+    {
+      "name": "Golf Residence Sousse",
+      "stars": "3",
+      "description": "Hôtel proche du port et du golf, ambiance conviviale."
+    },
+    {
+      "name": "Hannibal Palace",
+      "stars": "4",
+      "description": "Grand hôtel proche marina, adapté aux séjours touristiques."
+    },
+    {
+      "name": "Hasdrubal Thalassa & Spa Port El Kantaoui",
+      "stars": "5",
+      "description": "Resort 5★ réputé pour son spa et son service premium."
+    },
+    {
+      "name": "Houria Palace",
+      "stars": "4",
+      "description": "Hôtel confortable proche marina et plage."
+    },
+    {
+      "name": "Iberostar Diar El Andalous",
+      "stars": "5",
+      "description": "Resort 5★ élégant avec services premium."
+    },
+    {
+      "name": "Iberostar Kantaoui Bay",
+      "stars": "5",
+      "description": "Hôtel haut de gamme réservé aux adultes."
+    },
+    {
+      "name": "Kanta Hotel",
+      "stars": "4",
+      "description": "Hôtel familial proche marina et plage."
+    },
+    {
+      "name": "Marhaba Palace",
+      "stars": "5",
+      "description": "Hôtel 5★ proche marina avec spa et centre de congrès."
+    },
+    {
+      "name": "Miramar Sharm El Kantaoui",
+      "stars": "4",
+      "description": "Hôtel balnéaire proche de la marina avec piscine et animations."
+    },
+    {
+      "name": "Riviera Resort",
+      "stars": "4",
+      "description": "Resort familial avec activités sportives et plage privée."
+    },
+    {
+      "name": "Iberostar Diar El Andalous",
+      "stars": "5",
+      "description": "Resort 5★ élégant."
+    },
+    {
+      "name": "Iberostar Kantaoui Bay",
+      "stars": "5",
+      "description": "Hôtel adultes only."
+    },
+    {
+      "name": "El Mouradi Palace",
+      "stars": "5",
+      "description": "Resort luxe + congrès."
+    },
+    {
+      "name": "El Mouradi Palm Marina",
+      "stars": "5",
+      "description": "Hôtel luxe plage."
+    },
+    {
+      "name": "Marhaba Palace",
+      "stars": "5",
+      "description": "Hôtel 5★ marina."
+    },
+    {
+      "name": "Hasdrubal Thalassa",
+      "stars": "5",
+      "description": "Resort spa premium."
+    },
+    {
+      "name": "El Mouradi Club Kantaoui",
+      "stars": "4",
+      "description": "Resort animé."
+    },
+    {
+      "name": "El Mouradi Port El Kantaoui",
+      "stars": "4",
+      "description": "Hôtel proche marina."
+    },
+    { "name": "Houria Palace", "stars": "4", "description": "Hôtel club." },
+    {
+      "name": "Riviera Resort",
+      "stars": "4",
+      "description": "Resort familial."
+    },
+    {
+      "name": "Hannibal Palace",
+      "stars": "4",
+      "description": "Hôtel touristique."
+    },
+    { "name": "Kanta Hotel", "stars": "4", "description": "Hôtel familial." },
+    {
+      "name": "El Mouradi Club Selima",
+      "stars": "3",
+      "description": "Hôtel club bungalows."
+    },
+    {
+      "name": "Golf Residence",
+      "stars": "3",
+      "description": "Hôtel proche golf."
+    }
+  ],
+  "Tabarka": [
+    {
+      "name": "Dar Ismail Tabarka",
+      "stars": "4",
+      "description": "Hôtel avec piscine et proximité plage, idéal pour vacances détente."
+    },
+    {
+      "name": "Golden Yasmin Mehari Tabarka",
+      "stars": "4",
+      "description": "Hôtel balnéaire proche du golf et de la mer."
+    },
+    {
+      "name": "Marina Prestige Tabarka",
+      "stars": "4",
+      "description": "Hôtel moderne avec vue mer et port de plaisance."
+    },
+    {
+      "name": "Golden Yasmin Mehari",
+      "stars": "4",
+      "description": "Hôtel balnéaire."
+    },
+    {
+      "name": "Dar Ismail Tabarka",
+      "stars": "4",
+      "description": "Hôtel proche plage."
+    },
+    {
+      "name": "Marina Prestige",
+      "stars": "4",
+      "description": "Hôtel moderne vue mer."
+    }
+  ],
+  "Tataouine": [],
+  "Tozeur": [
+    {
+      "name": "Anantara Sahara Tozeur Resort & Villas",
+      "stars": "5",
+      "description": "Resort de luxe dans le désert avec villas privées."
+    },
+    {
+      "name": "Dar Nejma Tozeur",
+      "stars": "3",
+      "description": "Maison d’hôtes authentique au cœur de l’oasis."
+    },
+    {
+      "name": "Dar Saida Beya",
+      "stars": "4",
+      "description": "Boutique hôtel luxueux au style traditionnel raffiné."
+    },
+    {
+      "name": "Diar Abou Habibi",
+      "stars": "3",
+      "description": "Résidence touristique proche du désert et des oasis."
+    },
+    {
+      "name": "Golden Yasmin Ras El Ain Tozeur",
+      "stars": "4",
+      "description": "Hôtel oasis avec architecture saharienne et piscine."
+    },
+    {
+      "name": "Anantara Sahara Resort",
+      "stars": "5",
+      "description": "Resort luxe désert."
+    },
+    {
+      "name": "Dar Saida Beya",
+      "stars": "4",
+      "description": "Boutique hôtel luxe."
+    },
+    {
+      "name": "Golden Yasmin Ras El Ain",
+      "stars": "4",
+      "description": "Hôtel oasis."
+    },
+    { "name": "Dar Nejma", "stars": "3", "description": "Maison d’hôtes." },
+    {
+      "name": "Diar Abou Habibi",
+      "stars": "3",
+      "description": "Résidence touristique."
+    }
+  ],
+  "Tunis": [
+    {
+      "name": "SAMARONS HOTEL",
+      "stars": "4",
+      "description": "Hôtel urbain moderne situé aux Berges du Lac."
+    },
+    {
+      "name": "Maison Blanche Hôtel",
+      "stars": "4",
+      "description": "Hôtel chic au centre-ville, style contemporain."
+    },
+    {
+      "name": "Novotel Tunis Lac",
+      "stars": "4",
+      "description": "Hôtel moderne aux Berges du Lac, idéal business."
+    },
+    {
+      "name": "Karmel",
+      "stars": "3",
+      "description": "Hôtel urbain proche centre-ville."
+    },
+    {
+      "name": "Occidental Lac Tunis",
+      "stars": "4",
+      "description": "Hôtel moderne situé au Lac 1."
+    },
+    {
+      "name": "Marigold",
+      "stars": "4",
+      "description": "Hôtel business moderne en centre-ville."
+    },
+    {
+      "name": "Le Pacha Tunis",
+      "stars": "3",
+      "description": "Hôtel centre-ville pour séjours courts."
+    },
+    {
+      "name": "Royal ASBU",
+      "stars": "4",
+      "description": "Hôtel moderne proche Cité Culture."
+    },
+    {
+      "name": "Le Corail Suites Hotel",
+      "stars": "4",
+      "description": "Appart-hôtel moderne aux Berges du Lac."
+    },
+    {
+      "name": "Golden Tulip El Mechtel",
+      "stars": "4",
+      "description": "Hôtel business proche centre-ville."
+    },
+    {
+      "name": "ADAM Hôtel Suites",
+      "stars": "5",
+      "description": "Hôtel de luxe moderne aux Berges du Lac, idéal business et séjours haut de gamme."
+    },
+    {
+      "name": "Laico Tunis",
+      "stars": "5",
+      "description": "Hôtel 5★ au centre-ville."
+    },
+    {
+      "name": "Le Pacha Tunis",
+      "stars": "3",
+      "description": "Hôtel urbain économique."
+    },
+    {
+      "name": "Novotel Tunis Mohamed V",
+      "stars": "4",
+      "description": "Hôtel business au centre-ville."
+    },
+    {
+      "name": "Tiba Tunis",
+      "stars": "3",
+      "description": "Hôtel économique centre-ville."
+    },
+    {
+      "name": "Acropole Tunis",
+      "stars": "4",
+      "description": "Hôtel moderne aux Berges du Lac, idéal affaires."
+    },
+    {
+      "name": "Ambassadeurs Hotel",
+      "stars": "3",
+      "description": "Hôtel centre-ville adapté aux séjours courts."
+    },
+    {
+      "name": "Barceló Concorde Les Berges du Lac",
+      "stars": "5",
+      "description": "Hôtel luxe au Lac, idéal business et séminaires."
+    },
+    {
+      "name": "Business Hotel Tunis",
+      "stars": "4",
+      "description": "Hôtel business au centre-ville."
+    },
+    {
+      "name": "Carlton Tunis",
+      "stars": "3",
+      "description": "Hôtel historique avenue Habib Bourguiba."
+    },
+    {
+      "name": "Dar El-Karma",
+      "stars": "4",
+      "description": "Maison d’hôtes élégante avec architecture traditionnelle tunisienne."
+    },
+    {
+      "name": "Diplomat",
+      "stars": "4",
+      "description": "Hôtel business situé au centre de Tunis."
+    },
+    {
+      "name": "Downtown Tunis",
+      "stars": "4",
+      "description": "Hôtel moderne au centre de Tunis, idéal pour affaires."
+    },
+    {
+      "name": "Golden Tulip El Mechtel",
+      "stars": "4",
+      "description": "Hôtel urbain rénové, idéal pour séjours professionnels."
+    },
+    {
+      "name": "Golf Royal",
+      "stars": "3",
+      "description": "Hôtel central adapté aux voyages d’affaires."
+    },
+    {
+      "name": "Ibis Tunis",
+      "stars": "3",
+      "description": "Hôtel économique confortable situé au centre-ville."
+    },
+    {
+      "name": "Ibn Khaldoun",
+      "stars": "3",
+      "description": "Hôtel urbain proche de l’avenue Habib Bourguiba."
+    },
+    {
+      "name": "Karmel",
+      "stars": "3",
+      "description": "Hôtel simple et pratique pour courts séjours."
+    },
+    {
+      "name": "Lac Leman Hotel",
+      "stars": "4",
+      "description": "Hôtel moderne situé aux Berges du Lac."
+    },
+    {
+      "name": "Le Corail Suites",
+      "stars": "4",
+      "description": "Hôtel élégant aux Berges du Lac, idéal affaires et séjours longs."
+    },
+    {
+      "name": "Le Grand Hotel",
+      "stars": "3",
+      "description": "Hôtel central adapté aux voyages professionnels."
+    },
+    {
+      "name": "Maison Blanche Hôtel Tunis",
+      "stars": "4",
+      "description": "Hôtel boutique élégant situé au centre-ville."
+    },
+    {
+      "name": "Marigold",
+      "stars": "4",
+      "description": "Hôtel moderne situé aux Berges du Lac."
+    },
+    {
+      "name": "Novotel Tunis Lac",
+      "stars": "4",
+      "description": "Hôtel moderne situé aux Berges du Lac, idéal affaires."
+    },
+    {
+      "name": "Occidental Lac Tunis",
+      "stars": "4",
+      "description": "Hôtel business moderne aux Berges du Lac."
+    },
+    {
+      "name": "Palais Royal",
+      "stars": "3",
+      "description": "Hôtel urbain pratique pour courts séjours."
+    },
+    {
+      "name": "Royal ASBU",
+      "stars": "4",
+      "description": "Hôtel moderne adapté aux congrès et séjours d’affaires."
+    },
+    {
+      "name": "Royal Victoria",
+      "stars": "4",
+      "description": "Hôtel élégant situé près de la médina de Tunis."
+    },
+    {
+      "name": "SAMARONS HOTEL",
+      "stars": "4",
+      "description": "Hôtel moderne situé aux Berges du Lac, adapté aux séjours d’affaires."
+    },
+    {
+      "name": "The Penthouse Suites Hotel",
+      "stars": "4",
+      "description": "Hôtel moderne avec suites spacieuses aux Berges du Lac."
+    },
+    {
+      "name": "THE Z BOUTIQUE HOTELS",
+      "stars": "4",
+      "description": "Boutique hôtel moderne au design contemporain."
+    },
+    {
+      "name": "Tunis Grand Hotel",
+      "stars": "4",
+      "description": "Hôtel confortable adapté aux affaires et événements."
+    },
+    {
+      "name": "ADAM Hôtel Suites",
+      "stars": "5",
+      "description": "Hôtel luxe Lac 2."
+    },
+    {
+      "name": "Barceló Concorde",
+      "stars": "5",
+      "description": "Hôtel luxe Berges du Lac."
+    },
+    {
+      "name": "Laico Tunis",
+      "stars": "5",
+      "description": "Hôtel 5★ centre-ville."
+    },
+    {
+      "name": "Royal Tulip (ASBU non 5★)",
+      "stars": "4",
+      "description": "Hôtel moderne congrès."
+    },
+    {
+      "name": "Novotel Tunis Lac",
+      "stars": "4",
+      "description": "Hôtel business Lac."
+    },
+    {
+      "name": "Le Corail Suites",
+      "stars": "4",
+      "description": "Appart-hôtel Lac."
+    },
+    { "name": "Marigold", "stars": "4", "description": "Hôtel moderne." },
+    {
+      "name": "Occidental Lac",
+      "stars": "4",
+      "description": "Hôtel business."
+    },
+    {
+      "name": "Tunis Grand Hotel",
+      "stars": "4",
+      "description": "Hôtel affaires."
+    },
+    {
+      "name": "Golden Tulip El Mechtel",
+      "stars": "4",
+      "description": "Hôtel urbain rénové."
+    },
+    { "name": "Acropole", "stars": "4", "description": "Hôtel Lac 1." },
+    {
+      "name": "Maison Blanche",
+      "stars": "4",
+      "description": "Hôtel boutique."
+    },
+    { "name": "Diplomat", "stars": "4", "description": "Hôtel centre-ville." },
+    { "name": "Downtown Tunis", "stars": "4", "description": "Hôtel moderne." },
+    { "name": "SAMARONS", "stars": "4", "description": "Hôtel Lac." },
+    {
+      "name": "The Penthouse Suites",
+      "stars": "4",
+      "description": "Suites modernes."
+    },
+    {
+      "name": "THE Z Boutique",
+      "stars": "4",
+      "description": "Boutique hôtel design."
+    },
+    {
+      "name": "Ambassadeurs",
+      "stars": "3",
+      "description": "Hôtel centre-ville."
+    },
+    { "name": "Carlton", "stars": "3", "description": "Hôtel historique." },
+    {
+      "name": "Golf Royal",
+      "stars": "3",
+      "description": "Hôtel centre-ville."
+    },
+    { "name": "Ibis Tunis", "stars": "3", "description": "Hôtel économique." },
+    { "name": "Ibn Khaldoun", "stars": "3", "description": "Hôtel urbain." },
+    { "name": "Karmel", "stars": "3", "description": "Hôtel simple." },
+    { "name": "Le Pacha", "stars": "3", "description": "Hôtel centre-ville." },
+    { "name": "Palais Royal", "stars": "3", "description": "Hôtel pratique." },
+    { "name": "Tiba Tunis", "stars": "3", "description": "Hôtel économique." },
+    {
+      "name": "Carthage Thalasso Resort",
+      "stars": "5",
+      "description": "Resort luxe avec thalasso et plage privée."
+    },
+    {
+      "name": "Golden Carthage Hôtel et Résidence",
+      "stars": "4",
+      "description": "Complexe hôtelier avec vue mer, piscine et centre de bien-être."
+    },
+    {
+      "name": "Golden Tulip Carthage",
+      "stars": "4",
+      "description": "Hôtel moderne proche de la mer avec installations business."
+    },
+    {
+      "name": "Movenpick Hotel Gammarth Tunis",
+      "stars": "5",
+      "description": "Hôtel 5★ élégant avec vue mer et centre de bien-être."
+    },
+    {
+      "name": "Regency Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel de luxe en bord de mer avec centre de bien-être."
+    },
+    {
+      "name": "VERDI HOTELS (Ex Ramada Plaza) Tunis",
+      "stars": "5",
+      "description": "Hôtel 5★ en bord de mer avec centre de congrès."
+    },
+    {
+      "name": "Movenpick Gammarth",
+      "stars": "5",
+      "description": "Hôtel luxe vue mer."
+    },
+    {
+      "name": "Regency Hotel & Spa",
+      "stars": "5",
+      "description": "Hôtel bord de mer luxe."
+    },
+    {
+      "name": "VERDI Hotels (Ex Ramada Plaza)",
+      "stars": "5",
+      "description": "Hôtel 5★ avec centre congrès."
+    },
+    {
+      "name": "Carthage Thalasso Resort",
+      "stars": "5",
+      "description": "Resort luxe avec thalasso."
+    },
+    {
+      "name": "Golden Carthage",
+      "stars": "4",
+      "description": "Hôtel vue mer."
+    },
+    {
+      "name": "Golden Tulip Carthage",
+      "stars": "4",
+      "description": "Hôtel moderne business."
+    }
+  ],
+  "Zaghouan": [
+    {
+      "name": "Dar Zaghouan",
+      "stars": "3",
+      "description": "Maison d’hôtes en pleine nature avec vue montagne."
+    }
+  ],
+  "Zarzis": [
+    {
+      "name": "Eden Star",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec centre de thalasso et plage privée."
+    },
+    {
+      "name": "Lella Meriam",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec piscine et plage privée."
+    },
+    {
+      "name": "Odyssee Resort Thalassa & Spa",
+      "stars": "4",
+      "description": "Hôtel de charme avec architecture berbère et spa."
+    },
+    {
+      "name": "Vincci Safira Palms Zarzis",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec vue mer et piscine extérieure."
+    },
+    {
+      "name": "Zephir Hôtel & Spa",
+      "stars": "4",
+      "description": "Hôtel balnéaire avec spa et plage privée."
+    },
+    {
+      "name": "Zita Beach Resort",
+      "stars": "4",
+      "description": "Resort all inclusive avec grande plage."
+    },
+    {
+      "name": "Odyssee Resort",
+      "stars": "4",
+      "description": "Hôtel charme berbère."
+    },
+    {
+      "name": "Vincci Safira Palms",
+      "stars": "4",
+      "description": "Hôtel balnéaire."
+    },
+    {
+      "name": "Zephir Hôtel & Spa",
+      "stars": "4",
+      "description": "Hôtel plage + spa."
+    },
+    {
+      "name": "Zita Beach Resort",
+      "stars": "4",
+      "description": "Resort all inclusive."
+    },
+    {
+      "name": "Eden Star",
+      "stars": "4",
+      "description": "Hôtel plage thalasso."
+    },
+    { "name": "Lella Meriam", "stars": "4", "description": "Hôtel bord mer." }
+  ]
+}

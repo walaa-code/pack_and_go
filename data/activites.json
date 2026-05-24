@@ -1,0 +1,115 @@
+{
+  "Tunis": [
+    {
+      "Activité": "Dah Dah Happy Land (Manèges)",
+      "Prix_estimé": "2 – 10 TND par attraction"
+    },
+    {
+      "Activité": "Laser Game (Lac 2)",
+      "Prix_estimé": "15 – 25 TND la partie"
+    },
+    {
+      "Activité": "Padel (Salles privées)",
+      "Prix_estimé": "60 – 100 TND / heure (terrain)"
+    },
+    { "Activité": "Escape Room", "Prix_estimé": "25 – 40 TND par personne" },
+    { "Activité": "Bowling (Du Lac)", "Prix_estimé": "10 – 15 TND la partie" }
+  ],
+  "Sousse": [
+    {
+      "Activité": "Hannibal Park (Manèges)",
+      "Prix_estimé": "3 – 12 TND par attraction"
+    },
+    {
+      "Activité": "Acqua Palace (Parc Aquatique)",
+      "Prix_estimé": "35 – 50 TND la journée"
+    },
+    {
+      "Activité": "Jet-Ski (Corniche/Kantaoui)",
+      "Prix_estimé": "50 – 120 TND les 15 min"
+    },
+    { "Activité": "Karting Hergla", "Prix_estimé": "25 – 40 TND la session" },
+    {
+      "Activité": "Parachute ascensionnel",
+      "Prix_estimé": "60 – 90 TND le vol"
+    }
+  ],
+  "Hammamet": [
+    {
+      "Activité": "Carthage Land (Parc à thèmes)",
+      "Prix_estimé": "30 – 55 TND (Pass)"
+    },
+    {
+      "Activité": "Bateau Pirate (Sortie mer)",
+      "Prix_estimé": "25 – 45 TND avec déjeuner"
+    },
+    { "Activité": "Paintball", "Prix_estimé": "20 – 35 TND par session" },
+    {
+      "Activité": "Quad (Sortie forêt/montagne)",
+      "Prix_estimé": "40 – 70 TND la sortie"
+    },
+    { "Activité": "Accrobranche", "Prix_estimé": "15 – 30 TND le parcours" }
+  ],
+  "Monastir": [
+    {
+      "Activité": "Karting Monastir",
+      "Prix_estimé": "20 – 35 TND la session"
+    },
+    {
+      "Activité": "Plongée sous-marine",
+      "Prix_estimé": "60 – 100 TND le baptême"
+    },
+    {
+      "Activité": "Équitation (Skanes)",
+      "Prix_estimé": "25 – 50 TND l'heure"
+    },
+    {
+      "Activité": "Golf (Flamingo)",
+      "Prix_estimé": "80 – 150 TND (Green fee)"
+    }
+  ],
+  "Djerba": [
+    {
+      "Activité": "Parc Djerba Explore (Crocodiles)",
+      "Prix_estimé": "20 – 30 TND"
+    },
+    {
+      "Activité": "Kitesurf (Cours/Location)",
+      "Prix_estimé": "100 – 150 TND la session"
+    },
+    {
+      "Activité": "Balade à dos de chameau",
+      "Prix_estimé": "20 – 40 TND la balade"
+    },
+    {
+      "Activité": "Sortie en mer (Île aux Flamants)",
+      "Prix_estimé": "35 – 55 TND (Journée)"
+    }
+  ],
+  "Sfax": [
+    {
+      "Activité": "Sfax Land (Manèges)",
+      "Prix_estimé": "2 – 8 TND par attraction"
+    },
+    {
+      "Activité": "Terrains de Padel/Foot",
+      "Prix_estimé": "50 – 80 TND / heure"
+    },
+    {
+      "Activité": "Billard & Gaming centers",
+      "Prix_estimé": "5 – 12 TND / heure"
+    }
+  ],
+  "Douz / Kébili": [
+    {
+      "Activité": "Quad dans les dunes",
+      "Prix_estimé": "35 – 60 TND la session"
+    },
+    { "Activité": "Survol en ULM", "Prix_estimé": "80 – 130 TND le vol" },
+    { "Activité": "Char à voile", "Prix_estimé": "30 – 50 TND l'heure" },
+    {
+      "Activité": "Bivouac (Nuit désert)",
+      "Prix_estimé": "80 – 150 TND par personne"
+    }
+  ]
+}
