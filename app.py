@@ -14,6 +14,10 @@ from flask_cors import CORS
 from flask_mail import Mail, Message
 from flask_socketio import SocketIO, emit, join_room, leave_room
 import AI as ai 
+import os
+print("DB_HOST:", os.getenv('DB_HOST'))
+print("DB_PORT:", os.getenv('DB_PORT'))
+print("DB_NAME:", os.getenv('DB_NAME'))
 
 app = Flask(__name__)
 CORS(app)
