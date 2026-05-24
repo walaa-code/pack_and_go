@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_mail import Mail, Message
 from flask_socketio import SocketIO, emit, join_room, leave_room
-import ai
+import AI as ai 
 
 app = Flask(__name__)
 CORS(app)
