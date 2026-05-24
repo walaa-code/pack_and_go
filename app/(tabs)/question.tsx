@@ -1,6 +1,7 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useState } from "react";
+
 import {
   Alert,
   Image,
@@ -15,7 +16,6 @@ import {
   View,
 } from "react-native";
 import { useTravelData } from "../../context/TravelContext";
-
 /* ── Imports des données locales ── */
 import cafesData from "../../data/cafee.json";
 import hotelsData from "../../data/hotels.json";
@@ -469,30 +469,27 @@ export default function QuestionsScreen() {
       const code = currentInviteCode.trim().toUpperCase();
       const uid = userId ? Number(userId) : (travelData as any).userId;
       try {
-        const response = await fetch(
-          "http://192.168.1.8:5000/api/save_group_preferences",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              invite_code: code,
-              user_id: uid,
-              // ✅ PAS d'email ici — le backend fait :
-              //    SELECT email FROM users WHERE id = user_id
-              //    et utilise ce résultat comme email du leader
-              role: "leader",
-              hotel_type: hotelType,
-              hotel_location: hotelLocation,
-              activity_types: activityTypes.join(", "),
-              cafe_levels: cafeLevels.join(", "),
-              voyage_type: voyageType,
-              budget: budget ? Number(budget) : null,
-              hotel_name: hotel.trim(),
-              cafe_name: cafe.trim(),
-              tranche_age: ageRange,
-            }),
-          },
-        );
+        const response = await fetch("${API}/api/save_group_preferences", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            invite_code: code,
+            user_id: uid,
+            // ✅ PAS d'email ici — le backend fait :
+            //    SELECT email FROM users WHERE id = user_id
+            //    et utilise ce résultat comme email du leader
+            role: "leader",
+            hotel_type: hotelType,
+            hotel_location: hotelLocation,
+            activity_types: activityTypes.join(", "),
+            cafe_levels: cafeLevels.join(", "),
+            voyage_type: voyageType,
+            budget: budget ? Number(budget) : null,
+            hotel_name: hotel.trim(),
+            cafe_name: cafe.trim(),
+            tranche_age: ageRange,
+          }),
+        });
         const result = await response.json();
         console.log("✅ save_group_preferences leader:", result);
         if (result.email_used) {
@@ -505,7 +502,7 @@ export default function QuestionsScreen() {
 
     try {
       const uid = userId ? Number(userId) : (travelData as any).userId;
-      await fetch("http://192.168.1.8:5000/api/save_preferences", {
+      await fetch("${API}/api/save_preferences", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

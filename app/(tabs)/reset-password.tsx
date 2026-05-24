@@ -11,9 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-
-const API_BASE_URL = "http://192.168.1.8:5000";
-
+import { API } from "../../constants/api";
 export default function ResetPasswordScreen() {
   const [step, setStep] = useState<"email" | "verification" | "newPassword">(
     "email",
@@ -53,7 +51,7 @@ export default function ResetPasswordScreen() {
 
     setLoading(true);
     try {
-      const response = await fetch(`${API_BASE_URL}/reset-password`, {
+      const response = await fetch(`${API}/reset-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.toLowerCase().trim() }),
@@ -73,7 +71,7 @@ export default function ResetPasswordScreen() {
           "• Vérifiez que Flask tourne sur votre PC\n" +
           "• Remplacez l'IP dans le code par celle de votre PC\n" +
           "• Téléphone et PC doivent être sur le même Wi-Fi\n\n" +
-          `IP actuelle : ${API_BASE_URL}`,
+          `IP actuelle : ${API}`,
       );
     } finally {
       setLoading(false);
@@ -93,7 +91,7 @@ export default function ResetPasswordScreen() {
 
     setLoading(true);
     try {
-      const response = await fetch(`${API_BASE_URL}/verify-otp`, {
+      const response = await fetch(`${API}/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -153,7 +151,7 @@ export default function ResetPasswordScreen() {
 
     setLoading(true);
     try {
-      const response = await fetch(`${API_BASE_URL}/update-password`, {
+      const response = await fetch(`${API}/update-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

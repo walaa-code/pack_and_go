@@ -265,7 +265,7 @@ export default function ModifierInfoScreen() {
 
     try {
       // Étape 1 : mettre à jour les infos du voyage dans la table invitations
-      await fetch("http://192.168.1.8:5000/update-invite-info", {
+      await fetch("${API}/update-invite-info", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -280,7 +280,7 @@ export default function ModifierInfoScreen() {
 
       // ✅ Étape 2 : mettre à jour group_preferences (destination/dates) en BD
       // Les préférences de confort (hôtel, activités…) ne sont PAS touchées.
-      await fetch("http://192.168.1.8:5000/update-group-preferences", {
+      await fetch("${API}/update-group-preferences", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -294,7 +294,7 @@ export default function ModifierInfoScreen() {
       });
 
       // Étape 3 : notifier le leader par email
-      await fetch("http://192.168.1.8:5000/notify-leader", {
+      await fetch("${API}/notify-leader", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

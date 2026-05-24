@@ -17,8 +17,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { API } from "../../constants/api";
 import { useTravelData } from "../../context/TravelContext";
-
 // ─── Constantes visuelles ─────────────────────────────────────────────────────
 const BG = "#F0F5FC";
 const CARD_BG = "#FFFFFF";
@@ -34,8 +34,6 @@ const GREEN_DARK = "#166534";
 const ORANGE = "#F59E0B";
 const BLUE_ULTRA_PALE = "#EEF4FF";
 const BLUE_PALE = "#D6E4FF";
-
-const API_BASE_URL = "http://192.168.1.8:5000";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type StatutKey = "à venir" | "en cours" | "terminé" | "en_attente";
@@ -331,9 +329,7 @@ export default function ResumeScreen() {
       else setLoadingPrefs(true);
 
       try {
-        const res = await fetch(
-          `${API_BASE_URL}/api/group-summary?invite_code=${code}`,
-        );
+        const res = await fetch(`${API}/api/group-summary?invite_code=${code}`);
         if (res.ok) {
           const json = await res.json();
           console.log("📦 group-summary:", JSON.stringify(json));

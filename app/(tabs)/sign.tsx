@@ -15,10 +15,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-
+import { API } from "../../constants/api";
 // ─── Variables d'environnement ────────────────────────────────────────────────
-const API_BASE_URL = "http://192.168.1.8:5000";
-
 type RootStackParamList = {
   login: undefined;
   sign: undefined;
@@ -151,7 +149,7 @@ export default function SignupScreen() {
 
     setLoading(true);
     try {
-      const response = await fetch(`${API_BASE_URL}/signup`, {
+      const response = await fetch(`${API}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, email, phone, password }),
@@ -182,7 +180,7 @@ export default function SignupScreen() {
     } catch (_e) {
       Alert.alert(
         "Erreur réseau",
-        `Impossible de joindre ${API_BASE_URL}.\n\n` +
+        `Impossible de joindre ${API}.\n\n` +
           "• Vérifiez que Flask tourne\n" +
           "• Utilisez votre IP LAN (pas 127.0.0.1) dans .env\n" +
           "• Téléphone et PC sur le même Wi-Fi",

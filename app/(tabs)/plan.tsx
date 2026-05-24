@@ -44,7 +44,6 @@ import hotelsData from "../../data/hotels.json";
 import transportData from "../../data/transport.json";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
-const API_BASE = "http://192.168.1.8:5000";
 
 // ─── Couleurs ─────────────────────────────────────────────────────────────────
 const BLUE_DEEP = "#042A66";

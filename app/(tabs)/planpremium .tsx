@@ -23,7 +23,7 @@ import activitesData from "../../data/activites.json";
 import cafesData from "../../data/cafee.json";
 import hotelsData from "../../data/hotels.json";
 import transportData from "../../data/transport.json";
-
+import { API } from "../../constants/api";
 import {
   enrichCityDataWithJson,
   getCityTips,
@@ -34,8 +34,8 @@ import {
   type RagStep,
 } from "../../service/geminiRagService";
 
+
 // ─── CONFIG ──────────────────────────────────────────────────
-const API_BASE = "http://192.168.1.8:5000";
 const WEATHER_API_KEY =
   process.env.EXPO_PUBLIC_OPENWEATHER_KEY || "770482e1017ac0ddc2ac6247fb9358c8";
 
@@ -791,7 +791,7 @@ async function fetchGuestEmailsForCode(inviteCode: string): Promise<string[]> {
     const emails: string[] = [];
     try {
       const res = await fetch(
-        `${API_BASE}/api/group-preferences?invite_code=${encodeURIComponent(inviteCode)}`,
+        `${API}/api/group-preferences?invite_code=${encodeURIComponent(inviteCode)}`,
       );
       if (res.ok) {
         const data = await res.json();
@@ -801,7 +801,7 @@ async function fetchGuestEmailsForCode(inviteCode: string): Promise<string[]> {
           else if (item.user_id) {
             try {
               const userRes = await fetch(
-                `${API_BASE}/api/user/${item.user_id}`,
+                `${API}/api/user/${item.user_id}`,
               );
               if (userRes.ok) {
                 const user = await userRes.json();
@@ -816,7 +816,7 @@ async function fetchGuestEmailsForCode(inviteCode: string): Promise<string[]> {
     } catch {}
     try {
       const invRes = await fetch(
-        `${API_BASE}/api/pending-invites?invite_code=${encodeURIComponent(inviteCode)}`,
+        `${API}/api/pending-invites?invite_code=${encodeURIComponent(inviteCode)}`,
       );
       if (invRes.ok) {
         const invData = await invRes.json();
@@ -828,7 +828,7 @@ async function fetchGuestEmailsForCode(inviteCode: string): Promise<string[]> {
     } catch {}
     try {
       const allRes = await fetch(
-        `${API_BASE}/api/invite-emails?invite_code=${encodeURIComponent(inviteCode)}`,
+        `${API}/api/invite-emails?invite_code=${encodeURIComponent(inviteCode)}`,
       );
       if (allRes.ok) {
         const allData = await allRes.json();
@@ -881,7 +881,7 @@ async function savePlanToBackend(params: {
     guest_emails: guestEmails.filter((e) => e && e.includes("@")),
   };
   try {
-    const res = await fetch(`${API_BASE}/save-plan`, {
+    const res = await fetch(`${API}/save-plan`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bodyToSend),
@@ -3628,7 +3628,7 @@ export default function PlanPremium() {
     }
     setIsPaying(true);
     try {
-      await fetch(`${API_BASE}/pay`, {
+      await fetch(`${API}/pay`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

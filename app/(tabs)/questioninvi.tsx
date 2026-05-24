@@ -520,28 +520,25 @@ export default function QuestionInviScreen() {
     } as any);
 
     try {
-      const response = await fetch(
-        "http://192.168.1.8:5000/api/save_group_preferences",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            invite_code: (travelData as any).inviteCode,
-            user_id: uid, // ✅ jamais null si l'utilisateur est bien connecté
-            email: (travelData as any).email || "",
-            role: "invite",
-            hotel_type: hotelType,
-            hotel_location: hotelLocation,
-            activity_types: activityTypes.join(", "),
-            cafe_levels: cafeLevels.join(", "),
-            voyage_type: voyageType,
-            budget: budget ? Number(budget) : null,
-            hotel_name: hotel.trim(),
-            cafe_name: cafe.trim(),
-            tranche_age: ageRange,
-          }),
-        },
-      );
+      const response = await fetch("${API}/api/save_group_preferences", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          invite_code: (travelData as any).inviteCode,
+          user_id: uid, // ✅ jamais null si l'utilisateur est bien connecté
+          email: (travelData as any).email || "",
+          role: "invite",
+          hotel_type: hotelType,
+          hotel_location: hotelLocation,
+          activity_types: activityTypes.join(", "),
+          cafe_levels: cafeLevels.join(", "),
+          voyage_type: voyageType,
+          budget: budget ? Number(budget) : null,
+          hotel_name: hotel.trim(),
+          cafe_name: cafe.trim(),
+          tranche_age: ageRange,
+        }),
+      });
       const result = await response.json();
       if (result.error) throw new Error(result.error);
       console.log("✅ save_group_preferences invité OK — userId:", uid);

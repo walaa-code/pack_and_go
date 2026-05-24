@@ -390,5 +390,5 @@ app.post("/chat", async (req, res) => {
 });
 
 app.listen(3000, "0.0.0.0", () =>
-  console.log("✅ Pack & Go chatbot server running on http://192.168.1.8:3000"),
+  console.log("✅ Pack & Go chatbot server running on `${API}`"),
 );

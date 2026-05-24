@@ -13,6 +13,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { API } from "../constants/api";
 
 interface Message {
   id: string;
@@ -34,8 +35,6 @@ interface GroupChatContentProps {
     timestamp: number;
   }) => void;
 }
-
-const API = "http://192.168.1.8:5000";
 
 export default function GroupChatContent({
   inviteCode,

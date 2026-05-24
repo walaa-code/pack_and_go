@@ -19,6 +19,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTravelData } from "../../context/TravelContext";
+import { API } from "../../constants/api";
 
 type RootStackParamList = {
   login: undefined;
@@ -102,7 +103,6 @@ const iStyles = StyleSheet.create({
   eyeBtn: { padding: 4 },
   eyeIcon: { fontSize: 16 },
 });
-const API = "http://192.168.1.8:5000";
 const BLUE_DEEP = "#042A66";
 const BLUE_PRIMARY = "#0A4DBF";
 const BLUE_PALE = "#D6E4FF";

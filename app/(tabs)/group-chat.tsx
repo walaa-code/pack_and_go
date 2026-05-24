@@ -16,8 +16,6 @@ import {
 import { io, Socket } from "socket.io-client";
 import { useTravelData } from "../../context/TravelContext";
 
-const BACKEND_URL = "http://192.168.1.8:5000";
-
 type Message = {
   id: string;
   text: string;
@@ -74,7 +72,7 @@ export default function GroupChatScreen({
   useEffect(() => {
     if (!inviteCode) return;
 
-    const socket = io(BACKEND_URL, { transports: ["websocket"] });
+    const socket = io("${API}", { transports: ["websocket"] });
     socketRef.current = socket;
 
     socket.on("connect", () => {

@@ -519,7 +519,7 @@ export default function FormulaireScreen() {
     setShowFriendsModal(true);
 
     try {
-      const response = await fetch("http://192.168.1.8:5000/api/save_trip", {
+      const response = await fetch('${API}/api/save_trip', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -570,7 +570,7 @@ export default function FormulaireScreen() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 8000);
 
-      const res = await fetch("http://192.168.1.8:5000/send-invitations", {
+      const res = await fetch("${API}/send-invitations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,

@@ -21,7 +21,7 @@ import {
   View,
 } from "react-native";
 
-const API = "http://192.168.1.8:5000";
+import { API } from "../../constants/api";
 
 const BLUE_DEEP = "#042A66";
 const BLUE_PRIMARY = "#0A4DBF";
