@@ -18,8 +18,12 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { API } from "../../constants/api";
+// ⚠️ On n'importe plus API depuis constants/api, on met l'URL en dur
+// import { API } from "../../constants/api";
 import { useTravelData } from "../../context/TravelContext";
+
+/* ─── URL DE L'API (en dur pour éviter les problèmes d'import dans l'APK) ─── */
+const API = "https://packandgo-production.up.railway.app";
 
 /* ─── Palette ─── */
 const BG = "#060F1E";
@@ -153,7 +157,7 @@ function StepIndicator({ step }: { step: number }) {
   );
 }
 
-/* ─── MENU ─── */
+/* ─── MENU (inchangé) ─── */
 function AppMenuDark({ inviteCode }: { inviteCode: string | null }) {
   const [open, setOpen] = useState(false);
   const [promptVisible, setPromptVisible] = useState(false);
@@ -485,7 +489,6 @@ export default function FormulaireScreen() {
   const removeEmail = (index: number) =>
     setEmailInvites(emailInvites.filter((_, i) => i !== index));
 
-  // Sauvegarde asynchrone du voyage
   const handleSubmit = async () => {
     if (!ville) {
       Alert.alert("Destination requise", "Veuillez choisir une ville");
@@ -498,7 +501,6 @@ export default function FormulaireScreen() {
       return;
     }
 
-    // Sauvegarde en arrière-plan
     fetch(`${API}/api/save_trip`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -508,35 +510,25 @@ export default function FormulaireScreen() {
         arrival: toLocalDate(dateDebut),
         departure: toLocalDate(dateFin),
       }),
-    })
-      .then((r) => r.json())
-      .then((res) => {
-        if (res.status === "succes") console.log("✅ Voyage enregistré");
-      })
-      .catch((err) => console.error("❌ save_trip:", err));
+    }).catch((err) => console.error("❌ save_trip:", err));
 
-    // Réinitialiser l'état avant d'ouvrir la modale
     setInviteCode(null);
     setEmailInvites([]);
     setEmail("");
     setShowFriendsModal(true);
   };
 
-  // Envoi des invitations (avec alertes debug)
   const handleFriendsSubmit = async () => {
-    Alert.alert("🔍 Debug", "1 - Entrée dans handleFriendsSubmit");
+    // Alerte de debug 1
+    Alert.alert("Debug", "1 - Début handleFriendsSubmit");
+
     if (sendingEmails || isSubmitting) {
-      Alert.alert("🔍 Debug", "2 - Bloqué par sendingEmails ou isSubmitting");
+      Alert.alert("Debug", "2 - Envoyé ou en cours, abandon");
       return;
     }
-    Alert.alert("🔍 Debug", "3 - Flags OK, proceed");
 
-    // Si un code existe déjà, on navigue
     if (inviteCode) {
-      Alert.alert(
-        "🔍 Debug",
-        `4 - inviteCode existe : ${inviteCode} → navigation directe`,
-      );
+      Alert.alert("Debug", `3 - Code existant : ${inviteCode} → navigation`);
       setShowFriendsModal(false);
       const code = inviteCode;
       setInviteCode(null);
@@ -546,9 +538,8 @@ export default function FormulaireScreen() {
       });
       return;
     }
-    Alert.alert("🔍 Debug", "5 - Pas de inviteCode existant, on continue");
 
-    // Auto‑ajout de l'email en cours
+    // Auto-ajout de l'email en cours
     let finalInvites = [...emailInvites];
     const pendingEmail = email.trim();
     if (
@@ -559,26 +550,21 @@ export default function FormulaireScreen() {
       finalInvites = [...finalInvites, pendingEmail];
       setEmail("");
       setEmailInvites(finalInvites);
-      Alert.alert("🔍 Debug", `6 - Email auto-ajouté : ${pendingEmail}`);
+      Alert.alert("Debug", `4 - Email auto-ajouté : ${pendingEmail}`);
     }
+
     if (finalInvites.length === 0) {
       Alert.alert("Invité requis", "Ajoutez au moins un email.");
       return;
     }
-    Alert.alert("🔍 Debug", `7 - Envoi à ${finalInvites.length} email(s)`);
+
+    Alert.alert("Debug", `5 - Envoi à ${finalInvites.length} email(s)`);
 
     setIsSubmitting(true);
     setSendingEmails(true);
 
     const endpoint = `${API}/send-invitations`;
-    console.log("📡 Appel API :", endpoint, {
-      finalInvites,
-      ville,
-      dateDebut,
-      dateFin,
-      uid,
-    });
-    Alert.alert("🔍 Debug", `8 - Fetch vers ${endpoint}`);
+    Alert.alert("Debug", `6 - Fetch vers ${endpoint}`);
 
     try {
       const res = await fetch(endpoint, {
@@ -592,10 +578,14 @@ export default function FormulaireScreen() {
           admin_id: uid ? String(uid) : undefined,
         }),
       });
-      Alert.alert("🔍 Debug", `9 - Réponse reçue, status: ${res.status}`);
+
+      Alert.alert("Debug", `7 - Réponse reçue, status: ${res.status}`);
+
       const data = await res.json();
-      console.log("📦 Réponse brute :", data);
-      Alert.alert("🔍 Debug", `10 - Données: ${JSON.stringify(data)}`);
+      Alert.alert(
+        "Debug",
+        `8 - Données JSON: ${JSON.stringify(data).substring(0, 200)}`,
+      );
 
       if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
 
@@ -612,7 +602,7 @@ export default function FormulaireScreen() {
         } as any);
         Alert.alert(
           "✅ Succès",
-          `Code généré : ${code}\nPartagez-le avec vos amis.`,
+          `Code d'invitation : ${code}\nPartagez-le avec vos amis.`,
         );
       } else {
         Alert.alert(
@@ -621,7 +611,7 @@ export default function FormulaireScreen() {
         );
       }
     } catch (error: any) {
-      console.error("❌ Erreur envoi :", error);
+      console.error("Erreur envoi :", error);
       Alert.alert(
         "❌ Erreur réseau",
         error?.message || "Impossible d'envoyer les invitations.",
@@ -629,7 +619,7 @@ export default function FormulaireScreen() {
     } finally {
       setSendingEmails(false);
       setIsSubmitting(false);
-      Alert.alert("🔍 Debug", "11 - Fin de l'exécution (finally)");
+      Alert.alert("Debug", "9 - Fin de l'exécution");
     }
   };
 
@@ -836,7 +826,7 @@ export default function FormulaireScreen() {
         </Animated.View>
       </ScrollView>
 
-      {/* Modal Date */}
+      {/* Modal Date (inchangée) */}
       <Modal visible={showDateModal} transparent animationType="fade">
         <View style={styles.modalOverlay}>
           <View style={styles.dateModal}>
@@ -935,7 +925,7 @@ export default function FormulaireScreen() {
         </View>
       </Modal>
 
-      {/* Modal Amis (invitations) */}
+      {/* Modal Amis */}
       <Modal visible={showFriendsModal} transparent animationType="slide">
         <View style={styles.modalOverlay}>
           <ScrollView
