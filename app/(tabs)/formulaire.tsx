@@ -169,7 +169,6 @@ function AppMenuDark({ inviteCode }: { inviteCode: string | null }) {
     setPromptCode("");
     router.push({ pathname: "/group-chat", params: { inviteCode: code } });
   };
-
   const handleChatbot = () => {
     setOpen(false);
     router.push("/chatbot");
@@ -235,7 +234,6 @@ function AppMenuDark({ inviteCode }: { inviteCode: string | null }) {
       >
         <MaterialCommunityIcons name="dots-vertical" size={28} color={WHITE} />
       </TouchableOpacity>
-
       <Modal
         visible={open}
         transparent
@@ -300,7 +298,6 @@ function AppMenuDark({ inviteCode }: { inviteCode: string | null }) {
           </View>
         </TouchableOpacity>
       </Modal>
-
       <Modal
         visible={promptVisible}
         transparent
@@ -396,9 +393,8 @@ export default function FormulaireScreen() {
       const n = Number(params.userId);
       if (!isNaN(n) && n > 0) return n;
     }
-    if (travelData?.userId && Number(travelData.userId) > 0) {
+    if (travelData?.userId && Number(travelData.userId) > 0)
       return Number(travelData.userId);
-    }
     return null;
   })();
 
@@ -424,17 +420,8 @@ export default function FormulaireScreen() {
   const slideAnim = useRef(new Animated.Value(30)).current;
 
   useEffect(() => {
-    console.log(
-      "🔍 FormulaireScreen — params.userId:",
-      params.userId,
-      "| travelData.userId:",
-      travelData?.userId,
-      "→ uid résolu:",
-      uid,
-    );
-    if (!uid) {
-      console.warn("⚠️ userId introuvable dans formulaire — session invalide");
-    }
+    console.log("🔍 FormulaireScreen — uid résolu:", uid);
+    if (!uid) console.warn("⚠️ userId introuvable");
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
@@ -481,7 +468,6 @@ export default function FormulaireScreen() {
   };
 
   const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
-
   const addEmail = () => {
     const t = email.trim();
     if (!t) return;
@@ -496,17 +482,15 @@ export default function FormulaireScreen() {
     setEmailInvites([...emailInvites, t]);
     setEmail("");
   };
-
   const removeEmail = (index: number) =>
     setEmailInvites(emailInvites.filter((_, i) => i !== index));
 
-  /* ─── save_trip en arrière‑plan ─── */
+  // Sauvegarde asynchrone du voyage
   const handleSubmit = async () => {
     if (!ville) {
       Alert.alert("Destination requise", "Veuillez choisir une ville");
       return;
     }
-
     if (!uid) {
       Alert.alert("Session expirée", "Veuillez vous reconnecter.", [
         { text: "Se reconnecter", onPress: () => router.replace("/") },
@@ -514,7 +498,7 @@ export default function FormulaireScreen() {
       return;
     }
 
-    // Sauvegarde asynchrone
+    // Sauvegarde en arrière-plan
     fetch(`${API}/api/save_trip`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -527,35 +511,44 @@ export default function FormulaireScreen() {
     })
       .then((r) => r.json())
       .then((res) => {
-        if (res.status === "succes")
-          console.log("✅ Voyage enregistré — userId:", uid);
+        if (res.status === "succes") console.log("✅ Voyage enregistré");
       })
-      .catch((err) => console.error("❌ Erreur save_trip:", err));
+      .catch((err) => console.error("❌ save_trip:", err));
 
-    // 🔁 Réinitialiser l'état avant d'ouvrir la modale
+    // Réinitialiser l'état avant d'ouvrir la modale
     setInviteCode(null);
     setEmailInvites([]);
     setEmail("");
     setShowFriendsModal(true);
   };
 
-  /* ─── Envoi des invitations (sans timeout) ─── */
+  // Envoi des invitations (avec alertes debug)
   const handleFriendsSubmit = async () => {
-    if (sendingEmails || isSubmitting) return;
+    Alert.alert("🔍 Debug", "1 - Entrée dans handleFriendsSubmit");
+    if (sendingEmails || isSubmitting) {
+      Alert.alert("🔍 Debug", "2 - Bloqué par sendingEmails ou isSubmitting");
+      return;
+    }
+    Alert.alert("🔍 Debug", "3 - Flags OK, proceed");
 
-    // Si un code existe déjà, on passe directement à l'écran suivant
+    // Si un code existe déjà, on navigue
     if (inviteCode) {
+      Alert.alert(
+        "🔍 Debug",
+        `4 - inviteCode existe : ${inviteCode} → navigation directe`,
+      );
       setShowFriendsModal(false);
       const code = inviteCode;
-      setInviteCode(null); // reset pour le prochain voyage
+      setInviteCode(null);
       router.push({
         pathname: "/question",
         params: { inviteCode: code, userId: uid ? String(uid) : undefined },
       });
       return;
     }
+    Alert.alert("🔍 Debug", "5 - Pas de inviteCode existant, on continue");
 
-    // Auto‑ajout de l'email saisi s'il est valide
+    // Auto‑ajout de l'email en cours
     let finalInvites = [...emailInvites];
     const pendingEmail = email.trim();
     if (
@@ -566,51 +559,45 @@ export default function FormulaireScreen() {
       finalInvites = [...finalInvites, pendingEmail];
       setEmail("");
       setEmailInvites(finalInvites);
+      Alert.alert("🔍 Debug", `6 - Email auto-ajouté : ${pendingEmail}`);
     }
-
     if (finalInvites.length === 0) {
-      Alert.alert(
-        "Invité requis",
-        "Veuillez ajouter au moins un ami pour continuer.",
-      );
+      Alert.alert("Invité requis", "Ajoutez au moins un email.");
       return;
     }
+    Alert.alert("🔍 Debug", `7 - Envoi à ${finalInvites.length} email(s)`);
 
     setIsSubmitting(true);
     setSendingEmails(true);
 
     const endpoint = `${API}/send-invitations`;
-    console.log(
-      "🚀 Calling:",
-      endpoint,
-      "| uid:",
-      uid,
-      "| invites:",
+    console.log("📡 Appel API :", endpoint, {
       finalInvites,
-    );
+      ville,
+      dateDebut,
+      dateFin,
+      uid,
+    });
+    Alert.alert("🔍 Debug", `8 - Fetch vers ${endpoint}`);
 
     try {
-      // ✅ Requête sans timeout
       const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           invites: finalInvites,
           destination: ville,
-          date_depart: toLocalDate(dateDebut), // ← correction
-          date_arrivee: toLocalDate(dateFin), // ← correction
+          date_depart: toLocalDate(dateDebut),
+          date_arrivee: toLocalDate(dateFin),
           admin_id: uid ? String(uid) : undefined,
         }),
       });
-
-      if (!res.ok) {
-        const errText = await res.text();
-        console.error(`❌ HTTP ${res.status}:`, errText);
-        throw new Error(`Serveur: HTTP ${res.status}`);
-      }
-
+      Alert.alert("🔍 Debug", `9 - Réponse reçue, status: ${res.status}`);
       const data = await res.json();
-      console.log("📨 send-invitations response:", JSON.stringify(data));
+      console.log("📦 Réponse brute :", data);
+      Alert.alert("🔍 Debug", `10 - Données: ${JSON.stringify(data)}`);
+
+      if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
 
       if (data.invite_code) {
         const code = data.invite_code.trim().toUpperCase();
@@ -623,32 +610,26 @@ export default function FormulaireScreen() {
           inviteCode: code,
           userId: uid,
         } as any);
-        console.log("✅ inviteCode reçu :", code);
-        // On reste dans la modale pour afficher le code
+        Alert.alert(
+          "✅ Succès",
+          `Code généré : ${code}\nPartagez-le avec vos amis.`,
+        );
       } else {
-        console.warn("⚠️ Réponse sans invite_code:", data);
-        setTravelData({
-          ville,
-          dateDebut,
-          dateFin,
-          emailInvites: finalInvites,
-          userId: uid,
-        } as any);
-        setShowFriendsModal(false);
-        router.push({
-          pathname: "/question",
-          params: { userId: uid ? String(uid) : undefined },
-        });
+        Alert.alert(
+          "❌ Erreur",
+          "Le serveur n'a pas renvoyé de code d'invitation.",
+        );
       }
     } catch (error: any) {
-      console.error("❌ send-invitations error:", error?.message || error);
+      console.error("❌ Erreur envoi :", error);
       Alert.alert(
-        "Erreur d'envoi",
-        `Une erreur est survenue : ${error?.message || "inconnue"}\nVérifiez votre connexion.`,
+        "❌ Erreur réseau",
+        error?.message || "Impossible d'envoyer les invitations.",
       );
     } finally {
       setSendingEmails(false);
       setIsSubmitting(false);
+      Alert.alert("🔍 Debug", "11 - Fin de l'exécution (finally)");
     }
   };
 
@@ -669,7 +650,6 @@ export default function FormulaireScreen() {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Hero */}
         <LinearGradient
           colors={["#021B4E", "#042A66", "#083A8A"]}
           style={styles.hero}
@@ -695,7 +675,6 @@ export default function FormulaireScreen() {
           <StepIndicator step={1} />
         </LinearGradient>
 
-        {/* Form Card */}
         <Animated.View
           style={[
             styles.formCard,
@@ -707,7 +686,6 @@ export default function FormulaireScreen() {
             <Text style={styles.sectionLabel}>DESTINATION</Text>
           </View>
           <Text style={styles.fieldLabel}>Choisissez votre ville *</Text>
-
           <View style={styles.pickerBox}>
             <Text style={styles.pickerBoxIcon}>
               {ville ? VILLE_FLAGS[ville] || "📍" : "📍"}
@@ -733,7 +711,6 @@ export default function FormulaireScreen() {
               ))}
             </Picker>
           </View>
-
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -759,7 +736,6 @@ export default function FormulaireScreen() {
               </TouchableOpacity>
             ))}
           </ScrollView>
-
           <View style={styles.pillGrid}>
             {villesFiltrees.map((v) => (
               <TouchableOpacity
@@ -773,9 +749,7 @@ export default function FormulaireScreen() {
                     ville === v && styles.pillTextActive,
                   ]}
                 >
-                  {VILLE_FLAGS[v]}
-                  {"  "}
-                  {v}
+                  {VILLE_FLAGS[v]} {v}
                 </Text>
               </TouchableOpacity>
             ))}
@@ -787,7 +761,6 @@ export default function FormulaireScreen() {
             />
             <Text style={styles.sectionLabel}>PÉRIODE</Text>
           </View>
-
           <View style={styles.datesRow}>
             {(["debut", "fin"] as const).map((type) => {
               const isDebut = type === "debut";
@@ -807,7 +780,6 @@ export default function FormulaireScreen() {
               );
             })}
           </View>
-
           <View style={styles.durationRow}>
             <View style={styles.durationLine} />
             <View style={styles.durationBadge}>
@@ -858,7 +830,6 @@ export default function FormulaireScreen() {
               </View>
             </LinearGradient>
           </TouchableOpacity>
-
           <Text style={styles.secureNote}>
             🔒 Vos données sont protégées et sécurisées
           </Text>
@@ -981,16 +952,13 @@ export default function FormulaireScreen() {
               </Text>
 
               {!inviteCode && (
-                <View style={styles.requiredBanner}>
-                  <Text style={styles.requiredBannerIcon}>👥</Text>
-                  <Text style={styles.requiredBannerText}>
-                    Au moins 1 ami doit être invité pour continuer
-                  </Text>
-                </View>
-              )}
-
-              {!inviteCode && (
                 <>
+                  <View style={styles.requiredBanner}>
+                    <Text style={styles.requiredBannerIcon}>👥</Text>
+                    <Text style={styles.requiredBannerText}>
+                      Au moins 1 ami doit être invité pour continuer
+                    </Text>
+                  </View>
                   <View style={styles.emailRow}>
                     <TextInput
                       style={styles.emailInput}
@@ -1021,7 +989,6 @@ export default function FormulaireScreen() {
                       </LinearGradient>
                     </TouchableOpacity>
                   </View>
-
                   {emailInvites.length > 0 && (
                     <View style={styles.inviteList}>
                       <Text style={styles.inviteListTitle}>
@@ -1087,7 +1054,6 @@ export default function FormulaireScreen() {
                       </View>
                     ))}
                   </View>
-
                   <View style={styles.codeBox}>
                     <Text style={styles.codeLabel}>🔑 CODE D'INVITATION</Text>
                     <View style={styles.codeLetters}>
@@ -1151,7 +1117,6 @@ export default function FormulaireScreen() {
                   )}
                 </LinearGradient>
               </TouchableOpacity>
-
               {!sendingEmails && !inviteCode && (
                 <TouchableOpacity
                   onPress={() => setShowFriendsModal(false)}
