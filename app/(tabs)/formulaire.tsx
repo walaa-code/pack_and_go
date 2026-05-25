@@ -480,10 +480,12 @@ export default function FormulaireScreen() {
     setShowDateModal(false);
   };
 
+  const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
+
   const addEmail = () => {
     const t = email.trim();
     if (!t) return;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)) {
+    if (!isValidEmail(t)) {
       Alert.alert("Erreur", "Email invalide");
       return;
     }
@@ -533,11 +535,24 @@ export default function FormulaireScreen() {
     }
   };
 
-  /* ─── CORRECTION PRINCIPALE ─── */
+  /* ─── FIX PRINCIPAL : handleFriendsSubmit ─── */
   const handleFriendsSubmit = async () => {
     if (sendingEmails) return;
 
-    if (emailInvites.length === 0 && !inviteCode) {
+    // ✅ FIX 1 : Auto-ajouter l'email en cours de saisie s'il est valide
+    let finalInvites = [...emailInvites];
+    const pendingEmail = email.trim();
+    if (
+      pendingEmail &&
+      isValidEmail(pendingEmail) &&
+      !finalInvites.includes(pendingEmail)
+    ) {
+      finalInvites = [...finalInvites, pendingEmail];
+      setEmail("");
+      setEmailInvites(finalInvites);
+    }
+
+    if (finalInvites.length === 0 && !inviteCode) {
       Alert.alert(
         "Invité requis",
         "Veuillez ajouter au moins un ami pour continuer.",
@@ -563,7 +578,6 @@ export default function FormulaireScreen() {
     setIsSubmitting(true);
     setSendingEmails(true);
 
-    // ✅ FIX 1 : Log pour vérifier l'URL et les paramètres avant l'appel
     const endpoint = `${API}/send-invitations`;
     console.log(
       "🚀 Calling:",
@@ -571,12 +585,11 @@ export default function FormulaireScreen() {
       "| uid:",
       uid,
       "| invites:",
-      emailInvites,
+      finalInvites,
     );
 
     try {
       const controller = new AbortController();
-      // ✅ FIX 2 : Timeout augmenté à 25 secondes (Railway cold start + envoi email)
       const timeoutId = setTimeout(() => controller.abort(), 25000);
 
       const res = await fetch(endpoint, {
@@ -584,17 +597,16 @@ export default function FormulaireScreen() {
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
         body: JSON.stringify({
-          invites: emailInvites,
+          invites: finalInvites, // ✅ FIX 2 : liste capturée, pas le state
           destination: ville,
-          date_depart: toLocalDate(dateDebut),
-          date_arrivee: toLocalDate(dateFin),
+          date_arrivee: toLocalDate(dateDebut), // ✅ FIX 3 : noms de champs corrigés
+          date_depart: toLocalDate(dateFin),
           admin_id: uid ? String(uid) : undefined,
         }),
       });
 
       clearTimeout(timeoutId);
 
-      // ✅ FIX 3 : Vérifier le statut HTTP avant de parser le JSON
       if (!res.ok) {
         const errText = await res.text();
         console.error(`❌ HTTP ${res.status}:`, errText);
@@ -611,19 +623,18 @@ export default function FormulaireScreen() {
           ville,
           dateDebut,
           dateFin,
-          emailInvites,
+          emailInvites: finalInvites,
           inviteCode: code,
           userId: uid,
         } as any);
         console.log("✅ inviteCode Flask → contexte :", code, "| userId:", uid);
       } else {
-        // Réponse reçue mais sans invite_code
         console.warn("⚠️ Réponse reçue sans invite_code:", data);
         setTravelData({
           ville,
           dateDebut,
           dateFin,
-          emailInvites,
+          emailInvites: finalInvites,
           userId: uid,
         } as any);
         setShowFriendsModal(false);
@@ -633,7 +644,6 @@ export default function FormulaireScreen() {
         });
       }
     } catch (error: any) {
-      // ✅ FIX 4 : Afficher l'erreur à l'utilisateur au lieu de naviguer silencieusement
       console.error("❌ send-invitations:", error?.message || error);
 
       const isTimeout = error?.name === "AbortError";
@@ -1117,7 +1127,7 @@ export default function FormulaireScreen() {
               >
                 <LinearGradient
                   colors={
-                    emailInvites.length === 0 && !inviteCode
+                    emailInvites.length === 0 && !inviteCode && !email.trim()
                       ? ["#1A2B45", "#1A2B45"]
                       : [BLUE_PRIMARY, BLUE_GLOW]
                   }
@@ -1132,7 +1142,8 @@ export default function FormulaireScreen() {
                     style={[
                       styles.ctaBtnText,
                       emailInvites.length === 0 &&
-                        !inviteCode && { color: TEXT_MUTED },
+                        !inviteCode &&
+                        !email.trim() && { color: TEXT_MUTED },
                     ]}
                   >
                     {sendingEmails
