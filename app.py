@@ -17,7 +17,7 @@ import AI as ai
 
 print("DB_HOST:", os.getenv('MYSQLHOST'))
 print("DB_PORT:", os.getenv('MYSQLPORT'))
-print("DB_NAME:", os.getenv('MYSQDATABASE'))
+print("DB_NAME:", os.getenv('MYSQLDATABASE'))
 
 app = Flask(__name__)
 CORS(app)
