@@ -389,8 +389,8 @@ function AppMenuDark({ inviteCode }: { inviteCode: string | null }) {
 /* ─── COMPOSANT PRINCIPAL ─── */
 export default function FormulaireScreen() {
   const params = useLocalSearchParams<{ userId?: string; ville?: string }>();
-
   const { travelData, setTravelData } = useTravelData();
+
   const uid: number | null = (() => {
     if (params.userId && params.userId.trim() !== "") {
       const n = Number(params.userId);
@@ -500,7 +500,7 @@ export default function FormulaireScreen() {
   const removeEmail = (index: number) =>
     setEmailInvites(emailInvites.filter((_, i) => i !== index));
 
-  /* ─── FIX : handleSubmit ─── */
+  /* ─── save_trip en arrière‑plan ─── */
   const handleSubmit = async () => {
     if (!ville) {
       Alert.alert("Destination requise", "Veuillez choisir une ville");
@@ -514,7 +514,7 @@ export default function FormulaireScreen() {
       return;
     }
 
-    // save_trip en background — n'attend PAS la réponse
+    // Sauvegarde asynchrone
     fetch(`${API}/api/save_trip`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -532,34 +532,30 @@ export default function FormulaireScreen() {
       })
       .catch((err) => console.error("❌ Erreur save_trip:", err));
 
-    // Reset propre avant ouverture modal
+    // 🔁 Réinitialiser l'état avant d'ouvrir la modale
     setInviteCode(null);
     setEmailInvites([]);
     setEmail("");
     setShowFriendsModal(true);
   };
 
-  /* ─── FIX PRINCIPAL : handleFriendsSubmit ─── */
+  /* ─── Envoi des invitations (sans timeout) ─── */
   const handleFriendsSubmit = async () => {
-    // Bloquer les doubles clics
     if (sendingEmails || isSubmitting) return;
 
-    // Si inviteCode déjà généré → naviguer directement
+    // Si un code existe déjà, on passe directement à l'écran suivant
     if (inviteCode) {
       setShowFriendsModal(false);
       const code = inviteCode;
-      setInviteCode(null);
+      setInviteCode(null); // reset pour le prochain voyage
       router.push({
         pathname: "/question",
-        params: {
-          inviteCode: code,
-          userId: uid ? String(uid) : undefined,
-        },
+        params: { inviteCode: code, userId: uid ? String(uid) : undefined },
       });
       return;
     }
 
-    // Auto-ajouter l'email en cours de saisie s'il est valide
+    // Auto‑ajout de l'email saisi s'il est valide
     let finalInvites = [...emailInvites];
     const pendingEmail = email.trim();
     if (
@@ -572,7 +568,6 @@ export default function FormulaireScreen() {
       setEmailInvites(finalInvites);
     }
 
-    // Vérifier qu'il y a au moins un invité
     if (finalInvites.length === 0) {
       Alert.alert(
         "Invité requis",
@@ -595,23 +590,18 @@ export default function FormulaireScreen() {
     );
 
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 25000);
-
+      // ✅ Requête sans timeout
       const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        signal: controller.signal,
         body: JSON.stringify({
           invites: finalInvites,
           destination: ville,
-          date_arrivee: toLocalDate(dateDebut),
-          date_depart: toLocalDate(dateFin),
+          date_depart: toLocalDate(dateDebut), // ← correction
+          date_arrivee: toLocalDate(dateFin), // ← correction
           admin_id: uid ? String(uid) : undefined,
         }),
       });
-
-      clearTimeout(timeoutId);
 
       if (!res.ok) {
         const errText = await res.text();
@@ -633,10 +623,10 @@ export default function FormulaireScreen() {
           inviteCode: code,
           userId: uid,
         } as any);
-        console.log("✅ inviteCode Flask → contexte :", code, "| userId:", uid);
-        // Afficher le code dans le modal — ne pas fermer
+        console.log("✅ inviteCode reçu :", code);
+        // On reste dans la modale pour afficher le code
       } else {
-        console.warn("⚠️ Réponse reçue sans invite_code:", data);
+        console.warn("⚠️ Réponse sans invite_code:", data);
         setTravelData({
           ville,
           dateDebut,
@@ -651,15 +641,10 @@ export default function FormulaireScreen() {
         });
       }
     } catch (error: any) {
-      console.error("❌ send-invitations:", error?.message || error);
-
-      const isTimeout = error?.name === "AbortError";
+      console.error("❌ send-invitations error:", error?.message || error);
       Alert.alert(
-        isTimeout ? "Délai dépassé" : "Erreur d'envoi",
-        isTimeout
-          ? "Le serveur met trop de temps à répondre.\n\nVérifiez votre connexion ou réessayez dans quelques instants."
-          : `Une erreur est survenue : ${error?.message || "inconnue"}`,
-        [{ text: "Réessayer", style: "cancel" }],
+        "Erreur d'envoi",
+        `Une erreur est survenue : ${error?.message || "inconnue"}\nVérifiez votre connexion.`,
       );
     } finally {
       setSendingEmails(false);
@@ -979,7 +964,7 @@ export default function FormulaireScreen() {
         </View>
       </Modal>
 
-      {/* Modal Amis */}
+      {/* Modal Amis (invitations) */}
       <Modal visible={showFriendsModal} transparent animationType="slide">
         <View style={styles.modalOverlay}>
           <ScrollView
@@ -1183,7 +1168,7 @@ export default function FormulaireScreen() {
   );
 }
 
-/* ─── STYLES MENU ─── */
+/* ─── STYLES (inchangés) ─── */
 const menuStyles = StyleSheet.create({
   wrapper: { position: "relative" },
   trigger: {
@@ -1253,7 +1238,6 @@ const menuStyles = StyleSheet.create({
   },
 });
 
-/* ─── STYLES PROMPT ─── */
 const promptStyles = StyleSheet.create({
   overlay: {
     flex: 1,
@@ -1332,7 +1316,6 @@ const promptStyles = StyleSheet.create({
   btnConfirmText: { color: WHITE, fontWeight: "700", fontSize: 15 },
 });
 
-/* ─── STYLES PRINCIPAUX ─── */
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: BG },
   scroll: { paddingBottom: 48 },
