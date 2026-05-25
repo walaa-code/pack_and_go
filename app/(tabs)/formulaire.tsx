@@ -500,6 +500,7 @@ export default function FormulaireScreen() {
   const removeEmail = (index: number) =>
     setEmailInvites(emailInvites.filter((_, i) => i !== index));
 
+  /* ─── FIX : handleSubmit ─── */
   const handleSubmit = async () => {
     if (!ville) {
       Alert.alert("Destination requise", "Veuillez choisir une ville");
@@ -513,33 +514,52 @@ export default function FormulaireScreen() {
       return;
     }
 
-    setInviteCode(null);
-    setShowFriendsModal(true);
+    // save_trip en background — n'attend PAS la réponse
+    fetch(`${API}/api/save_trip`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user_id: uid,
+        destination: ville,
+        arrival: toLocalDate(dateDebut),
+        departure: toLocalDate(dateFin),
+      }),
+    })
+      .then((r) => r.json())
+      .then((res) => {
+        if (res.status === "succes")
+          console.log("✅ Voyage enregistré — userId:", uid);
+      })
+      .catch((err) => console.error("❌ Erreur save_trip:", err));
 
-    try {
-      const response = await fetch(`${API}/api/save_trip`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          user_id: uid,
-          destination: ville,
-          arrival: toLocalDate(dateDebut),
-          departure: toLocalDate(dateFin),
-        }),
-      });
-      const res = await response.json();
-      if (res.status === "succes")
-        console.log("✅ Voyage enregistré — userId:", uid);
-    } catch (error) {
-      console.error("❌ Erreur save_trip:", error);
-    }
+    // Reset propre avant ouverture modal
+    setInviteCode(null);
+    setEmailInvites([]);
+    setEmail("");
+    setShowFriendsModal(true);
   };
 
   /* ─── FIX PRINCIPAL : handleFriendsSubmit ─── */
   const handleFriendsSubmit = async () => {
-    if (sendingEmails) return;
+    // Bloquer les doubles clics
+    if (sendingEmails || isSubmitting) return;
 
-    // ✅ FIX 1 : Auto-ajouter l'email en cours de saisie s'il est valide
+    // Si inviteCode déjà généré → naviguer directement
+    if (inviteCode) {
+      setShowFriendsModal(false);
+      const code = inviteCode;
+      setInviteCode(null);
+      router.push({
+        pathname: "/question",
+        params: {
+          inviteCode: code,
+          userId: uid ? String(uid) : undefined,
+        },
+      });
+      return;
+    }
+
+    // Auto-ajouter l'email en cours de saisie s'il est valide
     let finalInvites = [...emailInvites];
     const pendingEmail = email.trim();
     if (
@@ -552,26 +572,12 @@ export default function FormulaireScreen() {
       setEmailInvites(finalInvites);
     }
 
-    if (finalInvites.length === 0 && !inviteCode) {
+    // Vérifier qu'il y a au moins un invité
+    if (finalInvites.length === 0) {
       Alert.alert(
         "Invité requis",
         "Veuillez ajouter au moins un ami pour continuer.",
       );
-      return;
-    }
-
-    // Code déjà généré → naviguer directement
-    if (inviteCode) {
-      setShowFriendsModal(false);
-      const code = inviteCode;
-      setInviteCode(null);
-      router.push({
-        pathname: "/question",
-        params: {
-          inviteCode: code,
-          userId: uid ? String(uid) : undefined,
-        },
-      });
       return;
     }
 
@@ -597,9 +603,9 @@ export default function FormulaireScreen() {
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
         body: JSON.stringify({
-          invites: finalInvites, // ✅ FIX 2 : liste capturée, pas le state
+          invites: finalInvites,
           destination: ville,
-          date_arrivee: toLocalDate(dateDebut), // ✅ FIX 3 : noms de champs corrigés
+          date_arrivee: toLocalDate(dateDebut),
           date_depart: toLocalDate(dateFin),
           admin_id: uid ? String(uid) : undefined,
         }),
@@ -628,6 +634,7 @@ export default function FormulaireScreen() {
           userId: uid,
         } as any);
         console.log("✅ inviteCode Flask → contexte :", code, "| userId:", uid);
+        // Afficher le code dans le modal — ne pas fermer
       } else {
         console.warn("⚠️ Réponse reçue sans invite_code:", data);
         setTravelData({
@@ -1122,7 +1129,7 @@ export default function FormulaireScreen() {
               <TouchableOpacity
                 onPress={handleFriendsSubmit}
                 activeOpacity={emailInvites.length > 0 || inviteCode ? 0.85 : 1}
-                disabled={sendingEmails}
+                disabled={sendingEmails || isSubmitting}
                 style={{ marginTop: 24 }}
               >
                 <LinearGradient
@@ -1135,7 +1142,7 @@ export default function FormulaireScreen() {
                   end={{ x: 1, y: 0 }}
                   style={[
                     styles.ctaBtn,
-                    sendingEmails && styles.ctaBtnDisabled,
+                    (sendingEmails || isSubmitting) && styles.ctaBtnDisabled,
                   ]}
                 >
                   <Text
