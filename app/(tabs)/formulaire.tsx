@@ -515,7 +515,6 @@ export default function FormulaireScreen() {
     setShowFriendsModal(true);
 
     try {
-      // ✅ CORRIGÉ : backticks + import API
       const response = await fetch(`${API}/api/save_trip`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -534,6 +533,7 @@ export default function FormulaireScreen() {
     }
   };
 
+  /* ─── CORRECTION PRINCIPALE ─── */
   const handleFriendsSubmit = async () => {
     if (sendingEmails) return;
 
@@ -563,12 +563,23 @@ export default function FormulaireScreen() {
     setIsSubmitting(true);
     setSendingEmails(true);
 
+    // ✅ FIX 1 : Log pour vérifier l'URL et les paramètres avant l'appel
+    const endpoint = `${API}/send-invitations`;
+    console.log(
+      "🚀 Calling:",
+      endpoint,
+      "| uid:",
+      uid,
+      "| invites:",
+      emailInvites,
+    );
+
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 8000);
+      // ✅ FIX 2 : Timeout augmenté à 25 secondes (Railway cold start + envoi email)
+      const timeoutId = setTimeout(() => controller.abort(), 25000);
 
-      // ✅ CORRIGÉ : backticks + import API
-      const res = await fetch(`${API}/send-invitations`, {
+      const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
@@ -582,7 +593,16 @@ export default function FormulaireScreen() {
       });
 
       clearTimeout(timeoutId);
+
+      // ✅ FIX 3 : Vérifier le statut HTTP avant de parser le JSON
+      if (!res.ok) {
+        const errText = await res.text();
+        console.error(`❌ HTTP ${res.status}:`, errText);
+        throw new Error(`Serveur: HTTP ${res.status}`);
+      }
+
       const data = await res.json();
+      console.log("📨 send-invitations response:", JSON.stringify(data));
 
       if (data.invite_code) {
         const code = data.invite_code.trim().toUpperCase();
@@ -597,6 +617,8 @@ export default function FormulaireScreen() {
         } as any);
         console.log("✅ inviteCode Flask → contexte :", code, "| userId:", uid);
       } else {
+        // Réponse reçue mais sans invite_code
+        console.warn("⚠️ Réponse reçue sans invite_code:", data);
         setTravelData({
           ville,
           dateDebut,
@@ -610,23 +632,18 @@ export default function FormulaireScreen() {
           params: { userId: uid ? String(uid) : undefined },
         });
       }
-    } catch (error) {
-      console.warn(
-        "⚠️ send-invitations timeout/erreur — navigation sans code",
-        error,
+    } catch (error: any) {
+      // ✅ FIX 4 : Afficher l'erreur à l'utilisateur au lieu de naviguer silencieusement
+      console.error("❌ send-invitations:", error?.message || error);
+
+      const isTimeout = error?.name === "AbortError";
+      Alert.alert(
+        isTimeout ? "Délai dépassé" : "Erreur d'envoi",
+        isTimeout
+          ? "Le serveur met trop de temps à répondre.\n\nVérifiez votre connexion ou réessayez dans quelques instants."
+          : `Une erreur est survenue : ${error?.message || "inconnue"}`,
+        [{ text: "Réessayer", style: "cancel" }],
       );
-      setTravelData({
-        ville,
-        dateDebut,
-        dateFin,
-        emailInvites,
-        userId: uid,
-      } as any);
-      setShowFriendsModal(false);
-      router.push({
-        pathname: "/question",
-        params: { userId: uid ? String(uid) : undefined },
-      });
     } finally {
       setSendingEmails(false);
       setIsSubmitting(false);

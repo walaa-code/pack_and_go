@@ -18,8 +18,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { LinearGradient } from "expo-linear-gradient";
-import { useTravelData } from "../../context/TravelContext";
 import { API } from "../../constants/api";
+import { useTravelData } from "../../context/TravelContext";
 
 type RootStackParamList = {
   login: undefined;
