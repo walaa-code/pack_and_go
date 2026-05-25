@@ -34,7 +34,7 @@ chat_rooms  = {}
 # ─────────────────────────────
 BREVO_API_KEY    = os.getenv("BREVO_API_KEY", "")
 MAIL_SENDER_NAME  = "Pack & Go Support"
-MAIL_SENDER_EMAIL = "najoutasekrafi12@gmail.com"
+MAIL_SENDER_EMAIL = "walaabourkhis@gmail.com"
 
 def send_email_brevo(to_email: str, subject: str, body_text: str = "", body_html: str = ""):
     """Envoie un email via l'API Brevo (HTTP) — contourne le blocage SMTP de Railway."""
