@@ -15,9 +15,9 @@ from flask_mail import Mail, Message
 from flask_socketio import SocketIO, emit, join_room, leave_room
 import AI as ai 
 import os
-print("DB_HOST:", os.getenv('DB_HOST'))
-print("DB_PORT:", os.getenv('DB_PORT'))
-print("DB_NAME:", os.getenv('DB_NAME'))
+print("DB_HOST:", os.getenv('DB_HOST') or os.getenv('MYSQLHOST'))
+print("DB_PORT:", os.getenv('DB_PORT') or os.getenv('MYSQLPORT'))
+print("DB_NAME:", os.getenv('DB_NAME') or os.getenv('MYSQLDATABASE') or os.getenv('MYSQDATABASE'))
 
 app = Flask(__name__)
 CORS(app)
@@ -37,14 +37,13 @@ otp_storage = {}
 chat_rooms  = {}
 def get_db_connection():
     return pymysql.connect(
-        host=os.getenv("MYSQLHOST", "mysql.railway.internal"),
-        port=int(os.getenv("MYSQLPORT", 3306)),
-        user=os.getenv("MYSQLUSER", "root"),
-        password=os.getenv("MYSQLPASSWORD", "XLOcDHfIaEUWmWhaVmiXqalCetqrWHhU"),
-        database=os.getenv("MYSQLDATABASE", "railway"),
+        host=os.getenv("DB_HOST") or os.getenv("MYSQLHOST", "mysql.railway.internal"),
+        port=int(os.getenv("DB_PORT") or os.getenv("MYSQLPORT", 3306)),
+        user=os.getenv("DB_USER") or os.getenv("MYSQLUSER", "root"),
+        password=os.getenv("DB_PASSWORD") or os.getenv("MYSQLPASSWORD", ""),
+        database=os.getenv("DB_NAME") or os.getenv("MYSQLDATABASE") or os.getenv("MYSQDATABASE", "railway"),
         cursorclass=pymysql.cursors.DictCursor
     )
-
 def format_date(d):
     if hasattr(d, 'strftime'):
         return d.strftime("%Y-%m-%d")
