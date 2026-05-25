@@ -140,7 +140,17 @@ def check_email():
         return jsonify({"exists": bool(user)}), 200
     except Exception as e:
         return jsonify({"exists": False, "message": str(e)}), 500
-
+@app.route('/test-email', methods=['GET'])
+def test_email():
+    try:
+        result = send_email_brevo(
+            to_email="walaabourkhis@gmail.com",
+            subject="🧪 Test",
+            body_text="Test email Railway",
+        )
+        return jsonify({"status": "✅ OK", "result": result}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 # ─────────────────────────────
 # SIGNUP
 # ─────────────────────────────
